@@ -4,3 +4,4 @@
 
 
 [开始吧](/README.md)
+[STRD工作组](https://mcstrd.cn)
