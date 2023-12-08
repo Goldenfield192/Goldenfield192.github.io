@@ -1,18 +1,20 @@
-每个轨道的json名都不应相同，即使它们分属不同的资源包。
+!>每个轨道的json名都不应相同，即使它们分属不同的资源包。尽管这样可以加载，但会导致不可预见的情况发生。
+</br>**你已经被警告过了。**
 
 IR通过`assets/immersiverailroading/track`中的`track.json`文件识别轨道。
 该文件格式如下：
 ```
 {
-	"pack": "String1",
+	"pack": "String3",
 	"types" : [
-	"轨道json名1",
-	"轨道json名2" //后续同理
+	"Name1",
+	"Name2"... //后续同理
   ]
 }
 ```
-IR而后会在同路径中寻找对应的json，在本案例中为`轨道json名1.json`等。
-这个json内容如下：
+IR而后会在`assets/immersiverailroading/track`中寻找对应的json，在本案例中为`Name1.json`、`Name2.json`等。
+
+这些json内容应该像这样：
 ```
 {
     "name": "String1",
@@ -51,24 +53,24 @@ IR而后会在同路径中寻找对应的json，在本案例中为`轨道json名
 |       名称        |         类型          |                      	用途                       |
 |:---------------:|:-------------------:|:----------------------------------------------:|
 |      name       |       String        |                   游戏内显示的轨道名                    |
-|     modeler     |       String        |                   游戏内显示的作者名                    |
-|      pack       |       String        |      游戏内显示的资源包名。如未定义，则使用`track.json`中的内容       |
-|     models      | 无序集合（String，String） | 当满足前一部分的条件时，<br/>显示后一部分指向的模型<br/>如有多行满足，显示最接近的 |
-|  model_gauge_m  |        float        |                 模型在blender中的轨距                 |
-| model_spacing_m |        float        |                    模型X轴方向长度                    |
-|    materials    |                     |                     可直接复制                      |
-|      clack      |       boolean       |                      WIP                       |
-|    bumpiness    |        float        |                      WIP                       |
-|       cog       |       boolean       |                      WIP                       |
+|     modeler     |       String        |                 游戏内显示的作者名，可缺省                  |
+|      pack       |       String        |     游戏内显示的资源包名。如缺省，则使用对应包`track.json`中的内容      |
+|     models      | 无序集合（String，String） | 当满足前一部分的条件时，<br/>渲染后一部分指向的模型<br/>如有多行满足，渲染最接近的 |
+|  model_gauge_m  |        float        |               模型在blender中的轨距，单位m               |
+| model_spacing_m |        float        |                模型在X轴方向上的长度，单位m                 |
+|    materials    |         不明          |            轨道在生存模式下的配方。此部分建议直接复制上文             |
+|      clack      |       boolean       |                  推测与音效有关，WIP                   |
+|    bumpiness    |        float        |                  推测与音效有关，WIP                   |
+|       cog       |       boolean       |                  推测与音效有关，WIP                   |
 
 所有可用的READOUT：
 
-|         READOUT          |  用途  |
-|:------------------------:|:----:|
-| `RAIL_LEFT`和`RAIL_RIGHT` |  钢轨  |
-|          `TIE`           |  轨枕  |
-|          `BED`           |  路基  |
-|       `RAIL_BASE`        | 其余全部 |
+|         READOUT          |    用途     |
+|:------------------------:|:---------:|
+| `RAIL_LEFT`和`RAIL_RIGHT` |  左、右侧钢轨   |
+|          `TIE`           |   推测为轨枕   |
+|          `BED`           |   推测为路基   |
+|       `RAIL_BASE`        | 除以上部分外的全部 |
 
 
 >一段轨道至少应该拥有`RAIL_BASE`、`RAIL_LEFT`和`RAIL_RIGHT`三种READOUT。
