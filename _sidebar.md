@@ -4,7 +4,8 @@
   * [轨道](Main/Markdowns/Track.md)
   * [定义新轨距](Main/Markdowns/Gauge.md)
 * ### 车辆
-  * [车辆/基础](Main/Markdowns/Cars.md)
+  * [客、货运车辆/基础](Main/Markdowns/Stock.md)
+  * [机车/基础](Main/Markdowns/Stock.md)
   * [车辆/特殊READOUT](Main/Markdowns/CarsAdvanced.md)
   * [机车/连杆动画](Main/Markdowns/LocoValveGears.md)
 * ### 可交互控件
