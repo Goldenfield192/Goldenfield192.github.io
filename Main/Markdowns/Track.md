@@ -63,7 +63,7 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的json，
 |       名称        |                类型                 |                          	含义                           |
 |:---------------:|:---------------------------------:|:------------------------------------------------------:|
 |     models      |   无序集合（String，ResourceLocation）   | 当轨距满足前一部分表达式的条件时，<br/>渲染后一部分指向的模型<br/>如有多个表达式成立，渲染最接近的 |
-|  model_gauge_m  |          float，默认为1.435           |                   模型在blender中的轨距，单位m                   |
+|  model_gauge_m  |          float，默认为1.435           |                   模型在blender中的轨距，单位米                   |
 | model_spacing_m | float，默认为`model_gauge_m`与1.435的比值 |                    模型在X轴方向上的长度，单位m                     |
 |      clack      |          boolean，默认为true          |                      推测与音效有关，WIP                       |
 |    bumpiness    |            float，默认为1             |                      推测与音效有关，WIP                       |
