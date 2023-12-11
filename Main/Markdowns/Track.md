@@ -29,7 +29,6 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的json，
     "model_gauge_m": 1.435,
     "model_spacing_m": 1,
     "clack": true,
-    "bumpiness": 1,
     "cog": false,
     "materials": {
       "TIE": [
@@ -65,8 +64,7 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的json，
 |     models      |   无序集合（String，ResourceLocation）   | 当轨距满足前一部分表达式的条件时，<br/>渲染后一部分指向的模型<br/>如有多个表达式成立，渲染最接近的 |
 |  model_gauge_m  |          float，默认为1.435           |                   模型在blender中的轨距，单位米                   |
 | model_spacing_m | float，默认为`model_gauge_m`与1.435的比值 |                    模型在X轴方向上的长度，单位m                     |
-|      clack      |          boolean，默认为true          |                      推测与音效有关，WIP                       |
-|    bumpiness    |            float，默认为1             |                      推测与音效有关，WIP                       |
+|      clack      |          boolean，默认为true          |                 在此铁轨上行驶时列车是否左右摇晃以模拟现实                  |
 |       cog       |         boolean，默认为false          |                      推测与音效有关，WIP                       |
 |    materials    |                不明                 |                轨道在生存模式下的配方。此部分建议直接复制上文                 |
 
