@@ -5,4 +5,5 @@ CAML(Cam's Awesome Markup Language)是一种用于IR的描述型语言，基于j
 
 大多数情况下，caml文件在IR开发中等效于json文件，除了`stock.json`、`track.json`和`gauge.json`。它们必须是json文件。
 
-不过为统一起见，本教程将全程使用JSON进行讲解。
+本教程目前使用JSON进行讲解，后期会逐步转移到CAML上，**因为CAML允许注释**。
+

@@ -41,6 +41,13 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
               "cost": 2
           }
       ],
+      "BED": [
+        {
+          "item": "ore:gravel",
+          "cost": 3
+        }
+      ]
+    }
       "RAIL": [
           {
               "item": "ore:ingotIron",
@@ -68,7 +75,18 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 | model_spacing_m | float，默认为`model_gauge_m`与1.435的比值 |                    模型在X轴方向上的长度，单位m                     |
 |      clack      |          boolean，默认为true          |                 在此铁轨上行驶时列车是否左右摇晃以模拟现实                  |
 |       cog       |         boolean，默认为false          |                  与车厢的`cog`关键字有关，参见后文                   |
-|    materials    |               暂未明确                |                轨道在生存模式下的配方。此部分建议直接复制上文                 |
+
+#### 对于materials(仅生存模式有效)：
+
+|      |     item     |    cost     |
+|:----:|:------------:|:-----------:|
+|  类型  |  Fuzzy，WIP   |     int     |
+| TIE  | 放置轨道时消耗的路基种类 | 放置每米轨道消耗的数量 |
+| BED  | 放置轨道时消耗的道砟种类 | 放置每米轨道消耗的数量 |
+| RAIL | 放置轨道时消耗的铁轨种类 | 放置每米轨道消耗的数量 |
+
+格式参考样例，可自由设置。
+
 
 # 模型
 
