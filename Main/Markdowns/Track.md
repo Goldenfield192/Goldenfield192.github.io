@@ -1,6 +1,7 @@
 # JSON
 
-!>每个轨道的JSON名都不应相同，即使它们分属不同的资源包。尽管这样可以加载，但会导致不可预见的情况发生。
+>[!ATTENTION]
+>每个轨道的JSON名都不应相同，即使它们分属不同的资源包。尽管这样可以加载，但会导致不可预见的情况发生。
 
 
 IR通过`assets/immersiverailroading/track`中的`track.json`文件识别轨道。该文件格式如下：
@@ -101,4 +102,5 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 | `RAIL_LEFT`、`RAIL_RIGHT` | 左、右侧钢轨  |
 |       `RAIL_BASE`        | 除钢轨外的全部 |
 
+>[!NOTE]
 >一段轨道至少应该拥有`RAIL_BASE`、`RAIL_LEFT`和`RAIL_RIGHT`三种READOUT。

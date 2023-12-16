@@ -60,7 +60,6 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
   
 	"properties": {
 		"weight_kg": 10000,
-        "valve_gear": "walschaerts",
         "independent_brake": false,
         "pressure_brake": false,
         "swayMultiplier": 1,
@@ -108,8 +107,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 |        名称         |   类型    |                	含义                 |
 |:-----------------:|:-------:|:----------------------------------:|
 |     weight_kg     |   int   |          游戏内显示的车辆质量，单位千克           |
-|    valve_gear     | String  |             车辆拥有连杆组的种类             |
-| independent_brake | boolean |             车辆是否拥有独立制动             |
+| independent_brake | boolean |     车辆是否拥有独立制动，对于车厢来讲通常为`true`     |
 |  pressure_brake   | boolean |           车辆是否拥有压力制动器（？）           |
 |  swayMultiplier   | double  | 车辆在`clack=true`的轨道上行驶和通过轨道接缝时的摆动系数 |
 |  tiltMultiplier   | double  |             车辆过弯时的倾斜系数             |

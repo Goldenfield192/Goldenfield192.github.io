@@ -75,7 +75,7 @@
     "valve_gear": {
       "-1.0": "ResourceLocation",//车辆后退时播放
       "0.0": "ResourceLocation",//车辆静止时播放
-      "1.0": "ResourceLocation",//车辆前进时播放
+      "1.0": "ResourceLocation"//车辆前进时播放
       //你可以添加0.75、0.5、0.25等细分动画让整体动画更流畅。
     }
   }

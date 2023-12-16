@@ -11,8 +11,10 @@
 - 你会写json
 - 你有基础的故障排除能力和举一反三的能力
 
-> 本教程暂时使用1.16.5的测试版进行演示。你很快可以在Curseforge下载到1.10.0的IR。
- 
-如果你对这些教程有建议或意见，欢迎[提issues](https://github.com/Goldenfield192/Goldenfield192.github.io/issues)。你的反馈将会帮助这个教程做得更好。
+> [!NOTE]
+> 本教程暂时使用1.16.5的测试版进行演示，你可以在IR的Discord频道下载。你很快可以在Curseforge下载到1.10.0的IR。
+
+
+如果你对这个教程有建议或意见，欢迎[向我提issues](https://github.com/Goldenfield192/Goldenfield192.github.io/issues)。你的反馈将会帮助这个教程做得更好。
 
 我们开始吧。

@@ -5,9 +5,9 @@
 
 
 
-### 你需要在与`properties`并列的层级内添加它们。
+### 你需要在与`properties`并列的层级内添加它们：
 
-* 货车
+* 客车和货车
     
     ```json
         "freight": {
@@ -55,7 +55,6 @@
     |   width    | int |  每行物品栏显示的槽位数   |
     | capacity_l | int | 车辆的流体容量，单位升/毫桶 |
 
-* 客车没有特殊json
 # 模型
 
 车厢没有特殊READOUT。

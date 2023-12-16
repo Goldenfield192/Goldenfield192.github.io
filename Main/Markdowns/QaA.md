@@ -5,11 +5,12 @@
    * 包含相同READOUT的对象被IR认为是同一组件。
      * 比如，对于READOUT为`BOGEY_FRONT_WHEEL_[num]`的组件，名称为`BOGEY_FRONT_WHEEL_1`和`BOGEY_FRONT_WHEEL_2`的两个对象会被认为是两个组件，但名称为`BOGEY_FRONT_WHEEL_1_1`和`BOGEY_FRONT_WHEEL_1_2`的两个对象会被认为是同一组件
    * READOUT是无序的。
-   * 除READOUT外的字符均可自定义。 
+   * 除READOUT外的字符均可自定义。
    * 下文约定：
      - `[pos]`表示前/后(FRONT或REAR)，**这是对应READOUT的一部分。**
      - `[side]`表示左/右(LEFT或RIGHT)，**这是对应READOUT的一部分。**
-     - `[num]`表示任意不与其他同类物体重复的数字，**这是对应READOUT的一部分。**
+     - `[num]`不另行声明时表示任意不与其他同类物体重复的数字，**这是对应READOUT的一部分。**
+
 
 >2.我该使用什么软件？
    * 我们通常使用blender为IR制作模型。
@@ -34,7 +35,8 @@
   * blender中1m即为Minecraft中的一格
   * blender中，铁轨轨面/车辆轮缘的高度应为Z=0
 
-    ?>RTM则为Z=-1
+    >[!TIP]
+    >RTM则为Z=-1
 
   * 下文若无另行声明，则：
     * 长度指blender中<font color="red">X轴</font>长度
