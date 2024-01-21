@@ -35,7 +35,7 @@ IR可以直接通过READOUT或者灯光组来添加灯光。
 |:--------------------:|:----------------:|:-------------------------:|
 |       texture        | ResourceLocation |   IR使用的灯光贴图，缺省则使用默认贴图。    |
 |      castsLight      |     boolean      | 是否牺牲部分质量来优化性能表现，默认为`true` |
-|     reverseColor     |      十六进制颜色      |            WIP            |
+|     reverseColor     |      十六进制颜色      |         车辆倒行时显示颜色         |
 | blinkIntervalSeconds |      float       |            WIP            |
 |  blinkoffsetSeconds  |      float       |            WIP            |
 |   blinkFullBright    |     boolean      |            WIP            |

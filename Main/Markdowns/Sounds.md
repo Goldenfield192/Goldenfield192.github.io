@@ -18,7 +18,7 @@
 }
 ```
 
-对于音效，有如下关键字定义，它们都是可缺省的：
+对于音效，有如下关键字定义。它们都是可缺省的(尽管这没什么必要)：
 
 |       关键字        |        类型        |           含义            |
 |:----------------:|:----------------:|:-----------------------:|
@@ -28,11 +28,28 @@
 |   `clack_rear`   | ResourceLocation | 后轮对通过轨道接缝时播放(覆盖`clack`) |
 |     `couple`     | ResourceLocation |         车钩连接时播放         |
 |    `sliding`     | ResourceLocation |      车辆刹车时播放的轮轨滑动音      |
-|     `flange`     | ResourceLocation |          我不理解           |
+|     `flange`     | ResourceLocation |         法兰？我不理解         |
 | `flange_min_yaw` |      float       |         Cam不理解          |
 |   `collision`    | ResourceLocation |        车辆发生碰撞时播放        |
 
-你还可以定义每个音效的内容，就像样例中的`bell`一样，它们都是可缺省的（尽管这没什么意义）：
+>[!NOTE]
+> 这里的`ResourceLocation`只需包含路径部分，无需包含`immersiverailroading:`。
+
+对于内燃机车，有这些额外定义：
+
+|       关键字        |        类型        |           含义            |
+|:----------------:|:----------------:|:-----------------------:|
+|     `wheels`     | ResourceLocation |      车辆在轨道上运动时循环播放      |
+|     `clack`      | ResourceLocation |       轮对通过轨道接缝时播放       |
+|  `clack_front`   | ResourceLocation | 前轮对通过轨道接缝时播放(覆盖`clack`) |
+|   `clack_rear`   | ResourceLocation | 后轮对通过轨道接缝时播放(覆盖`clack`) |
+|     `couple`     | ResourceLocation |         车钩连接时播放         |
+|    `sliding`     | ResourceLocation |      车辆刹车时播放的轮轨滑动音      |
+|     `flange`     | ResourceLocation |         法兰？我不理解         |
+| `flange_min_yaw` |      float       |         Cam不理解          |
+|   `collision`    | ResourceLocation |        车辆发生碰撞时播放        |
+
+你还可以定义每个音效的内容，就像样例中的`bell`一样，它们都是可缺省的：
 
 |    关键字     |        类型        |          含义           |
 |:----------:|:----------------:|:---------------------:|
