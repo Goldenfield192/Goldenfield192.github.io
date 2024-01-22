@@ -18,9 +18,9 @@
     * [车辆/连杆动画](Main/Markdowns/LocoValveGears.md)
     * [车辆/Animatrix动画](Main/Markdowns/Animatrix.md)
     * [车辆/灯光系统](Main/Markdowns/Lights.md)
+    * [车辆/控制组](Main/Markdowns/Groups.md)
     * [车辆/READOUT动画与控件](Main/Markdowns/LocosControl.md)
     * [车辆/仪表](Main/Markdowns/LocosGauges.md)
-    * [车辆/控制组](Main/Markdowns/Groups.md)
     
   - 音效
     * [车辆/音效定义及使用](Main/Markdowns/Sounds.md)

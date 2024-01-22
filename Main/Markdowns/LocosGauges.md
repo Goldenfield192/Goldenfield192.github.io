@@ -12,7 +12,8 @@
 |     `GAUGE_REVERSER_[num]`      |   监测回转机状态   |
 |    `GAUGE_TRAIN_BRAKE_[num]`    |   监测刹车状态    |
 | `GAUGE_INDEPENDENT_BRAKE_[num]` |  监测独立刹车状态   |
-|     `BRAKE_PRESSURE_[num]`      |    监测风压     |
+
+你可以在`GAUGE_xxx_[num]`的xxx里填上你想监听的任何READOUT，我之前有提过。
 
 此处[num]仅作动画组件的区分之用，即`GAUGE_THROTTLE_1`和`GAUGE_THROTTLE_2`均监测控制组`THROTTLE`。
 

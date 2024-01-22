@@ -42,7 +42,7 @@
 
 ## MALLET_WALSCHAERTS
 
-用于[铰接车架式蒸汽机车](CarsAdvanced.md)的连杆动画。
+用于[铰接车架式蒸汽机车](Main/Markdowns/CarsAdvanced.md)的连杆动画。
 
 主车架部分与`WALSCHAERTS`相同，但对于前车架，READOUT较于主车架有所不同：
 
