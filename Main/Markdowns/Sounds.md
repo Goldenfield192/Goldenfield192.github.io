@@ -29,7 +29,7 @@
 |     `couple`     | ResourceLocation |                 车钩连接时播放                 |
 |    `sliding`     | ResourceLocation |              车辆刹车时播放的轮轨滑动音              |
 |     `flange`     | ResourceLocation | ~~法兰？我不理解~~</br>当车辆通过弯道(Cam说发生法兰摩擦)时播放* |
-| `flange_min_yaw` |      float       |           法兰音效触发时车辆通过的最小曲线弯度            |
+| `flange_min_yaw` |      float       |   法兰音效触发时车辆通过的最小曲线弯度，与flange共存，默认2.5    |
 |   `collision`    | ResourceLocation |                车辆发生碰撞时播放                |
 
 * 法兰音效播放条件挺复杂，需要车辆速度大于5km/h且 车辆前转向架相对于车体的偏航角与(后转向架相对于车体的偏航角/两转向架间距)大于
