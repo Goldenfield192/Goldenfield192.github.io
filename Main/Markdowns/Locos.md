@@ -106,6 +106,7 @@
     |          `CAB`           | 司机室，装饰性组件  |
     |         `PIPING`         |  管道，装饰性组件  |
     | `PARTICLE_CHIMNEY_[num]` |  用于烟囱的发烟器  |
+  | `PARTICLE_CHIMNEY_[num]` |  用于烟囱的发烟器  |
 
   * 对于连杆，详见[下一章](LocoValveGears.md)。
 

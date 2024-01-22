@@ -114,14 +114,14 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 
 ### passenger
-|     名称     |   类型    |           	含义            |
-|:----------:|:-------:|:------------------------:|
-|   slots    |   int   |       车厢最多可容纳的实体数        |
-|  center_x  | double  |      行走范围的纵向中心，单位米       |
-|  center_y  | double  | 玩家模型底部的高度 **+0.35** ，单位米 |
-|   length   | double  |      行走范围的长度/2，单位米       |
-|   width    | double  |       行走范围的宽度，单位米        |
-| should_sit | boolean | 玩家在车上时显示为站姿还是坐姿，默认则依轨距而定 |
+|     名称     |   类型    |                 	含义                 |
+|:----------:|:-------:|:-----------------------------------:|
+|   slots    |   int   |             车厢最多可容纳的实体数             |
+|  center_x  | double  |            行走范围的纵向中心，单位米            |
+|  center_y  | double  |      玩家模型底部的高度 **+0.35** ，单位米       |
+|   length   | double  |            行走范围的长度/2，单位米            |
+|   width    | double  |             行走范围的宽度，单位米             |
+| should_sit | boolean | 玩家在车上时显示为站姿还是坐姿，默认则依轨距而定(轨距<1m则为坐姿) |
 
 * 比如，对于
 ```json
@@ -152,8 +152,9 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 | front_slack  | float | 前车钩允许的滑动量 |
 |  rear_slack  | float | 后车钩允许的滑动量 |
 
-* 此处偏移值负值为向内偏移，正值为向外偏移。</br>对于绝大部分车辆，此处均为负值。准确值需自行尝试。
-* 对于滑动量，cam在Youtube上的[这个](https://www.youtube.com/watch?v=O-boGSqi_8c)视频能很好地说明。
+* RTM车辆连接时车辆长度根据trainDistance这个从车厢原点的绝对值算，IR不是。
+  * IR根据从最靠前和最靠后的顶点算相对值，正数就是向外偏移，负数向内
+* ·对于滑动量，cam在Youtube上的[这个](https://www.youtube.com/watch?v=O-boGSqi_8c)视频能很好地说明。
 
 
 # 模型
