@@ -57,7 +57,7 @@
 |     `chuff`      |  ResourceLocation  | 车辆连杆转一圈播一次 |
 |    `pressure`    |  ResourceLocation  |    不晓得     |
 | `cylinder_drain` |  ResourceLocation  |  气缸泄压时播放   |
-|    `whistle`     |  ResourceLocation  |     车辆     |
+|    `whistle`     |  ResourceLocation  |  同`horn`   |
 
 
 你还可以定义每个音效的内容，就像样例中的`bell`一样，它们都是可缺省的：
