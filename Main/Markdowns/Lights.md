@@ -2,9 +2,11 @@ IR直接通过READOUT来添加灯光。
 
 ## 头灯
 
-你可以为对象添加`HEADLIGHT_[num]`来标记这是一盏头灯。
+你可以为对象添加`HEADLIGHT_[pos]_[num]`来标记这是一盏头灯。
 
-可以在`HEADLIGHT_[num]`后添加形如`_0xFFFFFF`的十六进制颜色来定义灯光颜色。
+可以在`HEADLIGHT_[pos]_[num]`后添加形如`_0xFFFFFF`的十六进制颜色来定义灯光颜色。
+
+这里的`[pos]`用来声明头灯位置，最常见的是FRONT_LOCOMOTIVE，前车架。这个`[pos]`可缺省。
 
 在对应车辆的json中可以对头灯进行自定义，
 
@@ -13,7 +15,7 @@ IR直接通过READOUT来添加灯光。
 ```json
 {
   "lights": {
-    "HEADLIGHT_1": {
+    "HEADLIGHT_FRONT_LOCOMOTIVE_1": {
       "texture": "RL",
       "castsLight": false,
       "reverseColor": "0xFFFFFF",
@@ -70,9 +72,11 @@ IR直接通过READOUT来添加灯光。
 |:------------------:|:-----:|:--------------------:|
 | interiorLightLevel | float | 车内灯光亮度，取值范围[0.0,1.0] |
 
-*尽管这没什么影响
+尽管这没什么影响，看亮度还得`FULLBRIGHT`，所以`INTERIOR`只适用于大面积车内光照。
 
 >[!NOTE]
 >你可以将一个部件分为多个对象并向其中一些添加`FULLBRIGHT`或`INTERNAL`来使一个部件拥有多种效果
 > 
 > 比如向一扇车门的内侧部分添加`INTERIOR`而外侧不添加来实现车内照明
+> 
+> 光照修饰符只会作用于对应物体，而非整个READOUT。

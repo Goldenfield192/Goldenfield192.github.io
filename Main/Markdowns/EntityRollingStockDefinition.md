@@ -152,9 +152,9 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 | front_slack  | float | 前车钩允许的滑动量 |
 |  rear_slack  | float | 后车钩允许的滑动量 |
 
-* RTM车辆连接时车辆长度根据trainDistance这个从车厢原点的绝对值算，IR不是。
-  * IR根据从最靠前和最靠后的顶点算相对值，正数就是向外偏移，负数向内
+* RTM车辆连接时车辆长度根据trainDistance这个从车厢原点的绝对值算，IR不是。 IR根据从最靠前和最靠后的顶点算相对值，正数就是向外偏移，负数向内。
 * ·对于滑动量，cam在Youtube上的[这个](https://www.youtube.com/watch?v=O-boGSqi_8c)视频能很好地说明。
+* 两节车相连地方的车钩偏移和滑动量由相连车厢的相应值相加得到。就是说，首尾相连的两节车的偏移分别为0.5和一节1一节0等效。
 
 
 # 模型

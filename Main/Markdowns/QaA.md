@@ -24,8 +24,8 @@
      
        !>注意，Metasequoia无法为obj模型导出对象数据，不可用于IR追加包制作。
      
-   * 贴图可使用Paint.net等。
-   * 音效可使用Adobe Audition **（付费）** 等。
+   * 贴图可使用Paint.net、Pt等。
+   * 音效可使用Au，或者直接找个在线编辑器。
    * JSON可使用VS Code等。
 
 >3.在blender中建模有什么注意事项吗？
