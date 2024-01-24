@@ -89,18 +89,18 @@
 | `movePercent` |      float       | 在播放move前，控件的动画变量需要至少改变多少？与`move`共存 |
 |  `disengage`  | ResourceLocation |             玩家松开控件时播放              |
 
-你可以在`controls`里添加你想加音效的部件，填入它们的READOUT即可。Cam的例子是对于`k4_REVERSER_1_Cube`，填`REVERSER_1`。
+你可以在`controls`里添加你想加音效的部件，填入它们的**原始**READOUT即可。Cam的例子是对于`k4_REVERSER_1_Cube`，填`REVERSER_1`。
 
-对于所有音效，你还可以定义它们的内容，就像样例中的`bell`一样。它们都是可缺省的：
+对于所有音效，比起直接填入RL，你还可以定义它们的内容，就像上文样例中的`bell`一样。它们都是可缺省的：
 
-|    关键字     |        类型        |          含义           |
-|:----------:|:----------------:|:---------------------:|
-|  `start`   | ResourceLocation |        事件触发时播放        |
-|   `main`   | ResourceLocation |     `start`结束后播放      |
-|   `stop`   | ResourceLocation |   `main`结束或手动关闭时播放    |
-| `looping`  |     boolean      |    `main`部分是否循环播放     |
-| `distance` |      float       |      玩家可在多远处听到声音      |
-|  `volume`  |      float       |         音量系数          |
+|    关键字     |        类型        |        含义        |
+|:----------:|:----------------:|:----------------:|
+|  `start`   | ResourceLocation |     事件触发时播放      |
+|   `main`   | ResourceLocation |   `start`结束后播放   |
+|   `stop`   | ResourceLocation | `main`结束或手动关闭时播放 |
+| `looping`  |     boolean      |  `main`部分是否循环播放  |
+| `distance` |      float       |  玩家最远可在多远处听到声音   |
+|  `volume`  |      float       |       音量系数       |
 
 
 ```mermaid

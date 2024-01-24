@@ -51,12 +51,15 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
     "model_gauge_m": 1.435,
     "recommended_gauge_m": 1.435,
     "darken_model": 0.05,
+    "show_current_load_only": false,
+
+    "sound_dampening_percentage": 0.75,
+    "scale_pitch": true,
   
     "tex_variants": {
         "alpha": "alala"
     },
   
-    "show_current_load_only": false,
   
 	"properties": {
 		"weight_kg": 10000,
@@ -65,43 +68,52 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
         "swayMultiplier": 1,
         "tiltMultiplier": 1
 	},
+
+
+    "passenger": {
+	  	  "slots": 10,
+	  	  "center_x": 0,
+		  "center_y": 1.4,
+		  "length": 4.5,
+		  "width": 2
+	  },
   
-	"passenger": {
-		"slots": 10,
-		"center_x": 0,
-		"center_y": 1.4,
-		"length": 4.5,
-		"width": 2
-	},
+	  "pivot": {
+		  "front": 3.8, 
+		  "rear": -3.8
+	  },
   
-	"pivot": {
-		"front": 3.8, 
-		"rear": -3.8
-	},
-  
-	"couplers": {
-		"front_offset": -0.08,
-		"rear_offset": -0.08
-	}
+	  "couplers": {
+		  "front_offset": -0.08,
+		  "rear_offset": -0.08
+	  }
 }
 
 ```
 ## 对json字段的解释
 
-|         字段名            |        类型        |          	含义          |
-|:----------------------:|:----------------:|:---------------------:|
-|          name          |      String      |    游戏内显示的车辆名，不可缺省     |
-|        modeler         |      String      | 游戏内显示的作者名，如缺省则显示为N/A  |
-|          pack          |      String      | 游戏内显示的资源包名，如缺省则显示为N/A |
-|         model          | ResourceLocation |         模型位置          |
-|     model_gauge_m      |      double      |  模型在blender中的轨距，单位米   |
-|  recommended_gauge_m   |      double      |   模型在游戏中显示的推荐轨距，单位米   |
-|      darken_model      |      double      |  模型渲染时颜色加深系数。**已过时**  |
-| show_current_load_only |     boolean      |          WIP          |
+|              字段名              |        类型        |          	含义          |
+|:-----------------------------:|:----------------:|:---------------------:|
+|             name              |      String      |    游戏内显示的车辆名，不可缺省     |
+|            modeler            |      String      | 游戏内显示的作者名，如缺省则显示为N/A  |
+|             pack              |      String      | 游戏内显示的资源包名，如缺省则显示为N/A |
+|             model             | ResourceLocation |         模型位置          |
+|         model_gauge_m         |      double      |  模型在blender中的轨距，单位米   |
+|      recommended_gauge_m      |      double      |   模型在游戏中显示的推荐轨距，单位米   |
+|         darken_model          |      double      |  模型渲染时颜色加深系数。**已过时**  |
+|    show_current_load_only     |     boolean      |          WIP          |
+|  sound_dampening_percentage   | float（百分数的小数形式）  | 当玩家在车内时，听到的声音的音量减少多少？ |
+|          scale_pitch          |     boolean      |    根据轨距设置音量倍率（待测试）    |
 
 ![关于darken_model](../Textures/pic10.png ':size=50%')
 
 从左至右`darken_model`值依次为0.1、0.075、0.05、0.025、0。
+
+>[!WARNING]
+> 如果`model_gauge_m`与`properties`中填入数值对应的轨距不一致，则会导致数值出错。
+
+### tex_variants
+见[下文](Main/Markdowns/CarsAdvanced?id=涂装变体)。
 
 ### properties
 |        字段名        |   类型    |                	含义                 |
