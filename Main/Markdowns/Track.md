@@ -47,8 +47,7 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
           "item": "ore:gravel",
           "cost": 3
         }
-      ]
-    }
+      ],
       "RAIL": [
           {
               "item": "ore:ingotIron",
@@ -77,6 +76,9 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 |      clack      |          boolean，默认为true          |                 在此铁轨上行驶时列车是否左右摇晃以模拟现实                  |
 |       cog       |         boolean，默认为false          |                  与车厢的`cog`关键字有关，参见后文                   |
 
+>[!TIP]
+> `models`可用于为不同轨距设置不同精度的模型
+
 #### 对于materials(仅生存模式有效)：
 
 |      |     item     |    cost     |
@@ -97,10 +99,10 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 
 可用的READOUT：
 
-|         READOUT          |   用途    |
-|:------------------------:|:-------:|
-| `RAIL_LEFT`、`RAIL_RIGHT` | 左、右侧钢轨  |
-|       `RAIL_BASE`        | 除钢轨外的全部 |
+|         READOUT          |    用途     |
+|:------------------------:|:---------:|
+| `RAIL_LEFT`、`RAIL_RIGHT` |  左、右侧钢轨   |
+|       `RAIL_BASE`        | 除钢轨外的全部模型 |
 
 >[!NOTE]
 >一段轨道至少应该拥有`RAIL_BASE`、`RAIL_LEFT`和`RAIL_RIGHT`三种READOUT。

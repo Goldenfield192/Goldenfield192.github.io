@@ -1,13 +1,20 @@
- >1.什么是READOUT？
+>1.什么是READOUT？
    * IR使用对象名来区分组件并控制动画，这些对象名中可被识别的语素即为READOUT。
+    
+        > [!WARNING]
+        > 每个READOUT间应使用下划线分割，否则会导致识别出错。
+
    * 如对于车架，`FRAME`为其对应的READOUT，这意味着其对象名称至少应包含`FRAME`。
      </br>![awa](../Textures/pic1.png "就像这样")
    * 包含相同READOUT的对象被IR认为是同一组件。
-     * 比如，对于READOUT为`BOGEY_FRONT_WHEEL_[num]`的组件，名称为`BOGEY_FRONT_WHEEL_1`和`BOGEY_FRONT_WHEEL_2`的两个对象会被认为是两个组件，但名称为`BOGEY_FRONT_WHEEL_1_1`和`BOGEY_FRONT_WHEEL_1_2`的两个对象会被认为是同一组件
+     * 比如，对于READOUT为`BOGEY_FRONT_WHEEL_[num]`的组件：
+       * 名称为`BOGEY_FRONT_WHEEL_1`和`BOGEY_FRONT_WHEEL_2`的两个对象会被认为是两个组件；
+       * 但名称为`BOGEY_FRONT_WHEEL_1_1`和`BOGEY_FRONT_WHEEL_1_2`的两个对象会被认为是同一组件，这经常导向轮子旋转动画不对的结果；
+       * 而`BOGEY_FRONT_WHEEL1`和`BOGEY_FRONT_WHEEL2`不会被加载(不存在对应的READOUT)。
    * READOUT是无序的。
    * 除READOUT外的字符均可自定义。
    * 下文约定：
-     - `[pos]`表示前/后(FRONT或REAR)，**这是对应READOUT的一部分。**
+     - `[pos]`不另行声明时表示前/后(FRONT或REAR)，**这是对应READOUT的一部分。**
      - `[side]`表示左/右(LEFT或RIGHT)，**这是对应READOUT的一部分。**
      - `[num]`不另行声明时表示任意不与其他同类物体重复的数字，**这是对应READOUT的一部分。**
 
@@ -18,15 +25,15 @@
    
        ?>不同于RTM，IR直接通过mtl文件加载贴图。
    
-     * 导出模型时，为了正确显示动画，应使用`Wavefront(.obj)(legacy)`模式，且只勾选OBJ物体。
+     * 导出模型时，为了使READOUT被正确识别，应使用`Wavefront(.obj)(legacy)`模式，且只勾选OBJ物体。
        </br>![awa](../Textures/pic4.png "就像这样")
      * 在资源包里，对应mtl文件和贴图应该和obj文件放在一起。     
      
-       !>注意，Metasequoia无法为obj模型导出对象数据，不可用于IR追加包制作。
+       !>注意，Metasequoia无法为obj模型导出对象数据，不可用于IR追加包制作，但是可通过fbx导出模型到blender（请清除自定义拆边法向数据来获取正常的平滑渲染）。
      
-   * 贴图可使用Paint.net、Pt等。
+   * 贴图可使用Paint.net、Substance 3d painter等。
    * 音效可使用Au，或者直接找个在线编辑器。
-   * JSON可使用VS Code等。
+   * JSON可使用VS Code、notepad++等。
 
 >3.在blender中建模有什么注意事项吗？
   * 在blender中，IR以<font color="red">-X</font>方向为前，<font color="blue">+Z</font>方向为上，<font color="green">-Y</font>方向为左，就像这样
@@ -46,10 +53,10 @@
 >4.什么是ResourceLocation？
   * [即命名空间ID](https://minecraft.fandom.com/zh/wiki/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4ID)
     * IR的*命名空间*为`immersiverailroading`。
-      * IR资源包的*名称*应该为一串以`/`分割的路径，根目录为`assets/immersiverailroading`
+      * 下文的*ResourceLocation*应该为一串以`assets/immersiverailroading`为根目录，以`/`分割的资源包内路径。
       
         举个例子：
       
           对于ResourceLocation为`immersiverailroading:models/rolling_stock/locomotives/a1_peppercorn/a1_peppercorn.obj`的模型，
           
-          其在资源包内的相对路径为`assets/immersiverailroading/models/rolling_stock/locomotives/a1_peppercorn/a1_peppercorn.obj`
+          其在资源包内的路径为`assets/immersiverailroading/models/rolling_stock/locomotives/a1_peppercorn/a1_peppercorn.obj`
