@@ -37,9 +37,9 @@
 
 * 理论上flange_min_yaw不应小于这个值:
 ```
-    Arcsin(L/2R)*sqrt(maxspeed)/sqrt(5)
+    (Arcsin(L/2R)*(1-1/L))*sqrt(maxspeed)/sqrt(5)
 ```
-* 其中L为车辆转向架间距，R为理论最小转弯半径，maxSpeed为车辆json内的最大速度</br>不过游戏内车辆全速前进时速度会大于理论值。
+* 其中L为车辆json内转向架间距，R为理论最小转弯半径，maxSpeed为车辆json内的最大速度</br>不过游戏内车辆全速前进时速度会大于理论值。
 
 * 或许可以当作最小转弯半径警告音？至少我不喜欢听这个。
 
