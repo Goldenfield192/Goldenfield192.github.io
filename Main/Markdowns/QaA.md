@@ -25,7 +25,7 @@
    
        ?>不同于RTM，IR直接通过mtl文件加载贴图。
    
-     * 导出模型时，为了使READOUT被正确识别，应使用`Wavefront(.obj)(legacy)`模式，且只勾选OBJ物体。
+     * 导出模型时，为了使READOUT被正确识别，应使用`Wavefront(.obj)(legacy)`模式，勾选OBJ物体，且勾选“几何数据”中的三角化。Minecraft对多边面的支持不佳。
        </br>![awa](../Textures/pic4.png "就像这样")
      * 在资源包里，对应mtl文件和贴图应该和obj文件放在一起。     
      
