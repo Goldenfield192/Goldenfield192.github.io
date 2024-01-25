@@ -51,7 +51,7 @@
 |          关键字          |        类型        |                        含义                        |
 |:---------------------:|:----------------:|:------------------------------------------------:|
 |        `idle`         | ResourceLocation |                     车辆怠速时播放                      |
-|       `running`       | ResourceLocation |                     车辆运行时播放                      |
+|       `running`       | ResourceLocation |        车辆运行时播放。会随节流阀大小调节倍速（节流阀为1时达到100%）         |
 |        `horn`         | ResourceLocation | 车辆[鸣笛](https://www.mcmod.cn/item/780406.html)时播放 |
 |        `bell`         | ResourceLocation | 车辆[响铃](https://www.mcmod.cn/item/780407.html)时播放 |
 

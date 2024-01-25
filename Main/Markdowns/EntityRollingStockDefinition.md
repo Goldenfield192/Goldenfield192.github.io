@@ -59,8 +59,14 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
     "tex_variants": {
         "alpha": "alala"
     },
-  
-  
+    "particles":{
+        "smoke":{
+           "texture": "immersiverailroading:your/particle.png"
+        },
+        "steam":{
+            "texture": "immersiverailroading:your/particle.png"
+        }
+    },
 	"properties": {
 		"weight_kg": 10000,
         "independent_brake": false,
@@ -114,6 +120,14 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 ### tex_variants
 见[下文](Main/Markdowns/CarsAdvanced?id=涂装变体)。
+
+### particles
+定义用于粒子的贴图，`steam`内的贴图用于蒸汽机车，`smoke`内的用于内燃机车。
+
+`smoke`内的贴图在内燃机车启动后明度会自动降低，以模拟真实机车启动的黑烟。
+>[!NOTE]
+> 其实IR默认粒子贴图和默认灯光贴图是同一张。
+
 
 ### properties
 |        字段名        |   类型    |                	含义                 |
