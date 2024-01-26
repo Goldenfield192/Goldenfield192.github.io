@@ -106,3 +106,5 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 
 >[!NOTE]
 >一段轨道至少应该拥有`RAIL_BASE`、`RAIL_LEFT`和`RAIL_RIGHT`三种READOUT。
+> 
+> 如若对象不包含有效READOUT，则在某些情况下不会被渲染从而影响观感，而非像车辆般默认为`SHELL`。（@saltyfish）
