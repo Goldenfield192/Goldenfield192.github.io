@@ -156,7 +156,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
       ...,
       "center_x": 2,
       "center_y": 0.35,
-      "length": 2,
+      "length": 1,
       "width": 2
    }
 }
