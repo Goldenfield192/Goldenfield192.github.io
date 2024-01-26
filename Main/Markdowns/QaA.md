@@ -60,3 +60,7 @@
           对于ResourceLocation为`immersiverailroading:models/rolling_stock/locomotives/a1_peppercorn/a1_peppercorn.obj`的模型，
           
           其在资源包内的路径为`assets/immersiverailroading/models/rolling_stock/locomotives/a1_peppercorn/a1_peppercorn.obj`
+
+>5.下文一些名词的定义
+  * “对象”“物体”均指代blender中的物体。
+  * 待补充
