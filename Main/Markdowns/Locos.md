@@ -52,15 +52,18 @@
               "fuel_efficiency_%": 90,
               "fuel_capacity_l": 852,
               "horn_sustained": false,
+    
+		    "multi_unit_capable":false,
           }
       }
       ```
     
-      |        名称         |   类型    |       	含义       |
-      |:-----------------:|:-------:|:---------------:|
-      | fuel_efficiency_% |   int   | 燃料效率，与配置文件中的值乘算 |
-      |  fuel_capacity_l  |   int   | 机车的燃料容量，单位升/毫桶  |
-      |  horn_sustained   | boolean |   鸣笛时笛声是否循环播放   |
+      |        名称         |   类型    |            	含义             |
+      |:-----------------:|:-------:|:--------------------------:|
+      | fuel_efficiency_% |   int   |      燃料效率，与配置文件中的值乘算       |
+      |  fuel_capacity_l  |   int   |       机车的燃料容量，单位升/毫桶       |
+      |  horn_sustained   | boolean |        鸣笛时笛声是否循环播放         |
+    | multi_unit_capable | boolean | 是否允许机车重联运行(在相连车厢共享节流阀动画变量) |
 
 * 对于蒸汽机车，你需要额外添加：
 
@@ -72,8 +75,6 @@
 		    "slots": 30,
 		    "width": 15,
             "tender_auto_feed": true,
-  
-		    "multi_unit_capable":false,
         }
     }
     ```
@@ -85,7 +86,6 @@
   |       slots        |   int   |       机车燃料槽位数       |
   |       width        |   int   |     每行物品栏显示的槽位数     |
   |  tender_auto_feed  | boolean | 是否允许从相连的煤水车自动补充燃料和水 |
-  | multi_unit_capable | boolean |     是否允许机车重联运行      |
 * 对于手摇车，没有需额外添加的json，**但是你需要删去`era`语句。** 
 
 # 模型
