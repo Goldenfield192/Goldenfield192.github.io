@@ -40,7 +40,8 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 在示例中，IR会在`assets/immersiverailroading/rolling_stock/freight`中寻找`aa.json`。
 
-车辆json的基础文件格式如下：
+关于车辆json，[这是](https://github.com/TeamOpenIndustry/ImmersiveRailroading/blob/master/src/main/resources/assets/immersiverailroading/rolling_stock/default/base.caml)官方模板，我对此的解释如下。
+
 ```json
 {
 	"name": "Demo1",
@@ -165,6 +166,8 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 ![awa](../Textures/pic8.png ':size=50%')
 ![awa](../Textures/pic9.png ':size=50%')
+
+或许0.35并非常量而是轨面高度？
 
 ### pivot（旧为trucks）
 |  字段名  |  类型   |          	含义           |
