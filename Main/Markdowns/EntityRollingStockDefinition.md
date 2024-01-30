@@ -40,7 +40,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 在示例中，IR会在`assets/immersiverailroading/rolling_stock/freight`中寻找`aa.json`。
 
-关于车辆json，[这是](https://github.com/TeamOpenIndustry/ImmersiveRailroading/blob/master/src/main/resources/assets/immersiverailroading/rolling_stock/default/base.caml)官方模板，我对此的解释如下。
+以下是通用json及解释。
 
 ```json
 {
@@ -93,7 +93,12 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 	  "couplers": {
 		  "front_offset": -0.08,
 		  "rear_offset": -0.08
-	  }
+	  },
+  
+      "extra_tooltip_info": [
+          "Hello!",
+          "!olleH"
+      ]
 }
 
 ```
@@ -190,6 +195,9 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 * ·对于滑动量，cam在Youtube上的[这个](https://www.youtube.com/watch?v=O-boGSqi_8c)视频能很好地说明。
 * 两节车相连地方的车钩偏移和滑动量由相连车厢的相应值相加得到。就是说，首尾相连的两节车的偏移分别为0.5和一节1一节0等效。
 
+
+### extra_tooltip_info
+鼠标悬停在物品上时，在默认信息后追加显示的文本。每个字符串独立显示为一行。
 
 # 模型
 

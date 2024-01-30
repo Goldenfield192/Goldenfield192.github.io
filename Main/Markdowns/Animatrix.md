@@ -33,8 +33,8 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 
 |       字段名       |        类型        |                	含义                |
 |:---------------:|:----------------:|:---------------------------------:|
-|  control_group  |      String      |        控制组名，如果你没用控制组就看下一行         |
-|     readout     |      String      |  READOUT名，如果你用了控制组就看上一行，与上一行二选一   |
+|  control_group  |      String      |       对应的控制组名，如果你没用控制组就看下一行       |
+|     readout     |      String      |    对应的READOUT名。建议使用控制组，与上一行二选一    |
 |    animatrix    | ResourceLocation | 对应的动画文件位置。一个控制组，至少一个部件不应该有两个动画文件  |
 |      mode       |      String      |              动画播放方式               |
 |     offset      |      float       |           把动画变量加这个值后再执行           |
@@ -44,12 +44,13 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 
 所有可用于`mode`的动画播放方式：
 
-|     字段名      |       	含义       |
-|:------------:|:---------------:|
-| PLAY_FORWARD | 当动画变量大于0.75时播放  |
-| PLAY_REVERSE | 当动画变量小于0.75时倒放  |
-|  PLAY_BOTH   |     把前两个加起来     |
-|     LOOP     | 动画变量大于0.95时循环播放 |
-|  LOOP_SPEED  | 循环播放，但速度随动画变量变化 |
+|     字段名      |            	含义            |
+|:------------:|:-------------------------:|
+|    VALUE     | 直接由动画变量控制动画状态，动画变量即为动画百分比 |
+| PLAY_FORWARD |      当动画变量大于0.75时正放       |
+| PLAY_REVERSE |      当动画变量小于0.75时倒放       |
+|  PLAY_BOTH   |          把前两个加起来          |
+|     LOOP     |      动画变量大于0.95时循环播放      |
+|  LOOP_SPEED  |      循环播放，但速度随动画变量变化      |
 
 

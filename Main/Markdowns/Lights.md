@@ -6,7 +6,7 @@ IR直接通过READOUT来添加灯光。
 
 可以在`HEADLIGHT_[pos]_[num]`后添加形如`_0xFFFFFF`的十六进制颜色来定义灯光颜色。
 
-这里的`[pos]`用来声明头灯位置，最常见的是FRONT_LOCOMOTIVE，前车架。这个`[pos]`可缺省。
+这里的`[pos]`用来声明头灯位置，最常见的是FRONT_LOCOMOTIVE，前车架。这个`[pos]`可缺省，缺省则表示它在主车架上。
 
 在对应车辆的json中可以对头灯进行自定义，
 
@@ -30,17 +30,17 @@ IR直接通过READOUT来添加灯光。
 }
 ```
 
-你需要在`lights`中添加对应的READOUT名(`HEADLIGHT_[num]`)，而后在其中添加自定义内容。
+你需要在`lights`中添加对应的原始READOUT名(`HEADLIGHT_[num]`)，而后在其中添加自定义内容。
 
 
-|          名称          |        类型        |            	含义            |
-|:--------------------:|:----------------:|:-------------------------:|
-|       texture        | ResourceLocation |   IR使用的灯光贴图，缺省则使用默认贴图。    |
-|      castsLight      |     boolean      | 是否牺牲部分质量来优化性能表现，默认为`true` |
-|     reverseColor     |      十六进制颜色      |         车辆倒行时显示颜色         |
-| blinkIntervalSeconds |      float       |            WIP            |
-|  blinkoffsetSeconds  |      float       |            WIP            |
-|   blinkFullBright    |     boolean      |            WIP            |
+|          名称          |        类型        |                  	含义                   |
+|:--------------------:|:----------------:|:--------------------------------------:|
+|       lightTex       | ResourceLocation | IR使用的灯光贴图，缺省则使用默认贴图。**如果指定的贴图分上下，请把它倒过来。** |
+|      castsLight      |     boolean      |       是否牺牲部分质量来优化性能表现，默认为`true`        |
+|     reverseColor     |      十六进制颜色      |            车辆倒行时灯光颜色，缺省则不变。            |
+| blinkIntervalSeconds |      float       |            切换灯光明灭的时间间隔，单位秒             |
+|  blinkoffsetSeconds  |      float       |                  WIP                   |
+|   blinkFullBright    |     boolean      |                  WIP                   |
 
 >[!NOTE]
 >IR头灯的工作原理是在对象前方渲染一个对应大小和颜色的、自发光的灯光贴图
