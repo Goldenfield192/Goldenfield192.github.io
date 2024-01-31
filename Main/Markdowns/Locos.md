@@ -54,16 +54,20 @@
               "horn_sustained": false,
     
 		    "multi_unit_capable":false,
+            "throttle_notches": 8,
+            "dynamic_traction_control": true
           }
       }
       ```
     
-      |        名称         |   类型    |            	含义             |
-      |:-----------------:|:-------:|:--------------------------:|
-      | fuel_efficiency_% |   int   |      燃料效率，与配置文件中的值乘算       |
-      |  fuel_capacity_l  |   int   |       机车的燃料容量，单位升/毫桶       |
-      |  horn_sustained   | boolean |        鸣笛时笛声是否循环播放         |
-    | multi_unit_capable | boolean | 是否允许机车重联运行(在相连车厢共享节流阀动画变量) |
+      |            名称            |   类型    |            	含义             |
+      |:------------------------:|:-------:|:--------------------------:|
+      |    fuel_efficiency_%     |   int   | 燃料效率，与配置文件中的值乘算（值域[1,99]）  |
+      |     fuel_capacity_l      |   int   |       机车的燃料容量，单位升/毫桶       |
+      |      horn_sustained      | boolean |  鸣笛时笛声是否循环播放（false则仅播放一次）  |
+    |    multi_unit_capable    | boolean | 是否允许机车重联运行（在相连车厢共享节流阀动画变量） |
+    |     throttle_notches     |   int   |     内燃机车挡位数，默认为8（尚不完善）     |
+    | dynamic_traction_control | boolean |     车载电脑可否动态调控牵引力以防打滑      |
 
 * 对于蒸汽机车，你需要额外添加：
 
@@ -87,6 +91,9 @@
   |       width        |   int   |     每行物品栏显示的槽位数     |
   |  tender_auto_feed  | boolean | 是否允许从相连的煤水车自动补充燃料和水 |
 * 对于手摇车，没有需额外添加的json，**但是你需要删去`era`语句。** 
+
+>[!TIP]
+> 如果进入对话框等鼠标可自由移动的情景，IR的控制台可以用鼠标交互！
 
 # 模型
 
