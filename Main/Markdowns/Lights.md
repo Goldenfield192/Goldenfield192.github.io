@@ -43,7 +43,7 @@ IR直接通过READOUT来添加灯光。
 |   blinkFullBright    |     boolean      |                        WIP                         |
 
 >[!NOTE]
->IR头灯的工作原理是在对象前方渲染一个对应大小和颜色的、自发光的灯光贴图
+>IR头灯的工作原理是在对象前方渲染一个对应大小和颜色的、被`FULLBRIGHT`修饰的灯光贴图
 
 ![就像这样](../Textures/pic11.png ':size=50%')
 
