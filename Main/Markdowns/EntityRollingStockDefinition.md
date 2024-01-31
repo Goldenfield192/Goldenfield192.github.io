@@ -42,6 +42,9 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 以下是通用json及解释。
 
+>[!WARNING]
+> 由于IR使用多线程加载资源包，在一个线程占用模型时其他线程无法读取该文件，故十分不建议多个json指向同一模型文件，这会使同模型车辆只会加载随机的一个。
+
 ```json
 {
 	"name": "Demo1",

@@ -33,14 +33,14 @@ IR直接通过READOUT来添加灯光。
 你需要在`lights`中添加对应的原始READOUT名(`HEADLIGHT_[num]`)，而后在其中添加自定义内容。
 
 
-|          名称          |        类型        |                  	含义                   |
-|:--------------------:|:----------------:|:--------------------------------------:|
-|       lightTex       | ResourceLocation | IR使用的灯光贴图，缺省则使用默认贴图。**如果指定的贴图分上下，请把它倒过来。** |
-|      castsLight      |     boolean      |       是否牺牲部分质量来优化性能表现，默认为`true`        |
-|     reverseColor     |      十六进制颜色      |            车辆倒行时灯光颜色，缺省则不变。            |
-| blinkIntervalSeconds |      float       |            切换灯光明灭的时间间隔，单位秒             |
-|  blinkoffsetSeconds  |      float       |                  WIP                   |
-|   blinkFullBright    |     boolean      |                  WIP                   |
+|          名称          |        类型        |                        	含义                         |
+|:--------------------:|:----------------:|:--------------------------------------------------:|
+|       lightTex       | ResourceLocation | IR使用的灯光贴图，缺省则使用默认贴图。**如果指定的贴图分上下，请把它倒过来（flip V）。** |
+|      castsLight      |     boolean      |    若OptiFine启用，则在车灯前方创建动态光源，默认为`true`，但太多会影响性能     |
+|     reverseColor     |      十六进制颜色      |                  车辆倒行时灯光颜色，缺省则不变。                  |
+| blinkIntervalSeconds |      float       |                  切换灯光明灭的时间间隔，单位秒                   |
+|  blinkoffsetSeconds  |      float       |                        WIP                         |
+|   blinkFullBright    |     boolean      |                        WIP                         |
 
 >[!NOTE]
 >IR头灯的工作原理是在对象前方渲染一个对应大小和颜色的、自发光的灯光贴图
