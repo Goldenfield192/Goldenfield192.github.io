@@ -133,7 +133,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 ### particles
 定义用于粒子的贴图，`steam`内的贴图用于蒸汽机车，`smoke`内的用于内燃机车。
 
-`smoke`内的贴图在内燃机车启动后明度会自动降低，以模拟真实机车启动的黑烟。
+`smoke`内的贴图明度会随内燃机车节流阀增加而降低，以模拟真实机车启动时燃料燃烧造成的黑烟。
 >[!NOTE]
 > 其实IR默认粒子贴图和默认灯光贴图是同一张。
 
