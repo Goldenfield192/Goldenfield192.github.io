@@ -51,7 +51,7 @@
         },
     
         "tank": {
-        "capacity_l": 20000,
+            "capacity_l": 20000
         }
     }
     ```
