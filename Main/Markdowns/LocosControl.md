@@ -67,7 +67,7 @@ IR会自动根据该部件的朝向计算旋转轴方向，这个轴不一定是
 |   `INDEPENDENT_BRAKE_[num]`    | 控制车辆独立制动(如果有的话)  |
 |     `THROTTLE_BRAKE_[num]`     | 控制车辆风压制动器(如果有的话) |
 | `CYLINDER_DRAIN_CONTROL_[num]` |      控制气缸排水      |
-|      `ENGINE_START_[num]`      |                  |
+|      `ENGINE_START_[num]`      |      启动内燃机车      |
 
 此处`[num]`仅作动画组件的区分之用，即`THROTTLE_1`和`THROTTLE_2`均属于[控制组](Main/Markdowns/Groups)`THROTTLE`。
 
