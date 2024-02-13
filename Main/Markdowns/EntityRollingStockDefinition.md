@@ -60,9 +60,12 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
     "sound_dampening_percentage": 0.75,
     "scale_pitch": true,
   
+    "overlay": "immersiverailroading:gui/yourname/gui.caml",
+  
     "tex_variants": {
         "alpha": "alala"
     },
+  
     "particles":{
         "smoke":{
            "texture": "immersiverailroading:your/particle.png"
@@ -71,6 +74,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
             "texture": "immersiverailroading:your/particle.png"
         }
     },
+  
 	"properties": {
 		"weight_kg": 10000,
         "independent_brake": false,
@@ -78,8 +82,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
         "swayMultiplier": 1,
         "tiltMultiplier": 1
 	},
-
-
+  
     "passenger": {
 	  	  "slots": 10,
 	  	  "center_x": 0,
@@ -126,6 +129,9 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 
 >[!WARNING]
 > 如果`model_gauge_m`与`properties`中填入数值对应的轨距不一致，则会导致数值出错。
+
+### overlay
+见[下文](Main/Markdowns/CustomGUI.md)。
 
 ### tex_variants
 见[下文](Main/Markdowns/CarsAdvanced?id=涂装变体)。
