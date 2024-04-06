@@ -19,7 +19,7 @@
 {
 	"tex_variants": {
 		"Test1": "test1",
-        "Test2": "test2",
+        "Test2": "test2"
 	},
 }
 ```

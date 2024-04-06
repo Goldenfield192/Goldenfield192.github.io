@@ -27,6 +27,9 @@
    
      * 导出模型时，为了使READOUT被正确识别，应使用`Wavefront(.obj)(legacy)`模式，勾选OBJ物体，且勾选“几何数据”中的三角化。Minecraft对多边面的支持不佳。
        </br>![awa](../Textures/pic4.png "就像这样")
+     >[!CAUTION]
+> blender4.0中`Wavefront(.obj)(legacy)`已移除
+
      * 在资源包里，对应mtl文件和贴图应该和obj文件放在一起。     
      
        !>注意，Metasequoia无法为obj模型导出对象数据，不可用于IR追加包制作，但是可通过fbx导出模型到blender（请清除自定义拆边法向数据来获取正常的平滑渲染）。
