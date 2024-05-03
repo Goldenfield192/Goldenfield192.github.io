@@ -11,6 +11,7 @@
        * 名称为`BOGEY_FRONT_WHEEL_1`和`BOGEY_FRONT_WHEEL_2`的两个对象会被认为是两个组件；
        * 但名称为`BOGEY_FRONT_WHEEL_1_1`和`BOGEY_FRONT_WHEEL_1_2`的两个对象会被认为是同一组件，这经常导向轮子旋转动画不对的结果；
        * 而`BOGEY_FRONT_WHEEL1`和`BOGEY_FRONT_WHEEL2`不会被加载（不存在对应的READOUT，会被加载为没有动画的`SHELL`）。
+    >!无论如何你的车模至少应该有一个`FRAME`。
    * READOUT是无序的。
    * 除READOUT外的字符均可自定义。
    * 下文约定：
