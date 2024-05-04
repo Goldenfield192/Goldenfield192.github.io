@@ -76,10 +76,13 @@
         "properties": {
 	    	"max_psi": 300,
 	    	"water_capacity_l": 95000, 
-		    "slots": 30,
-		    "width": 15,
             "tender_auto_feed": true,
-        }
+            ...
+        },
+        "firebox": {
+		    "slots": 30,
+		    "width": 15
+        } 
     }
     ```
 
@@ -87,9 +90,9 @@
   |:------------------:|:-------:|:-------------------:|
   |      max_psi       |   int   | 机车蒸汽室最大压强，单位磅每平方英寸  |
   |  water_capacity_l  |   int   |    机车的水容量，单位升或毫桶    |
+  |  tender_auto_feed  | boolean | 是否允许从相连的煤水车自动补充燃料和水 |
   |       slots        |   int   |       机车燃料槽位数       |
   |       width        |   int   |     每行物品栏显示的槽位数     |
-  |  tender_auto_feed  | boolean | 是否允许从相连的煤水车自动补充燃料和水 |
 * 对于手摇车，没有需额外添加的json，**但是你需要删去`era`语句。** 
 
 >[!TIP]

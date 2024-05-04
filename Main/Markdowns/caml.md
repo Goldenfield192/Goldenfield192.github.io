@@ -37,4 +37,4 @@ caml中没有表示数组（json中`[`和`]`）的方法。，我们需要重复
     comment: "Hello"
     comment: "world!"
 ```
-caml中的键通常不加双引号，这是与json去别的另一点。
+caml中的键通常不加双引号，这是与json区别的另一点。

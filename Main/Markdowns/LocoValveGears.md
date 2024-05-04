@@ -33,7 +33,7 @@
 |  `ECCENTRIC_CRANK_[side]`  | 偏心曲柄  |
 |   `ECCENTRIC_ROD_[side]`   |  偏心杆  |
 |  `EXPANSION_LINK_[side]`   | 扩展连接器 |
-|    `RADIUS_BAR_[side]`     |  活塞杆  |
+|    `RADIUS_BAR_[side]`     |  曲拐臂  |
 
 只需要把车辆对应连杆部分按以上READOOUT命名即可。
 
