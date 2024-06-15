@@ -10,6 +10,8 @@ IR车辆任何逻辑的实现都可以说是控制组，有的比如节流阀刹
 对于每个拥有独特READOUT的部件或者内置逻辑(详见[这里](https://github.com/TeamOpenIndustry/ImmersiveRailroading/blob/master/src/main/java/cam72cam/immersiverailroading/gui/overlay/Readouts.java))，
 IR都会为它们分配一个控制组。这使得可交互控制台成为可能，只不过和平常控制组写法不大一样。
 
+//TODO 解释内置READOUT
+
 那你就要说了，我想让两三个部件共享同一个动画变量，怎么整？
 
 你需要把这几个部件用`CG_someword`关联起来，那IR就不自动分配控制组了，而是把对应物体的动画变量关联到该控制组。

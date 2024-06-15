@@ -11,7 +11,7 @@
        * 名称为`BOGEY_FRONT_WHEEL_1`和`BOGEY_FRONT_WHEEL_2`的两个对象会被认为是两个组件；
        * 但名称为`BOGEY_FRONT_WHEEL_1_1`和`BOGEY_FRONT_WHEEL_1_2`的两个对象会被认为是同一组件，这经常导向轮子旋转动画不对的结果；
        * 而`BOGEY_FRONT_WHEEL1`和`BOGEY_FRONT_WHEEL2`不会被加载（不存在对应的READOUT，会被加载为没有动画的`SHELL`）。
-    >!无论如何你的车模至少应该有一个`FRAME`。
+         !>无论如何你的车模至少应该有一个`FRAME`。
    * READOUT是无序的。
    * 除READOUT外的字符均可自定义。
    * 下文约定：
@@ -66,5 +66,6 @@
           其在资源包内的路径为`assets/immersiverailroading/models/rolling_stock/locomotives/a1_peppercorn/a1_peppercorn.obj`
 
 >5.下文一些名词的定义
-  * “对象”“物体”均指代blender中的物体。
+  * “物体”指代blender中的物体。
+  * “对象”指代READOUT相同的一些物体，他们在不通过`CG`或`LCG`指定时应属于同一控制组。
   * 待补充
