@@ -75,7 +75,7 @@ IR直接通过READOUT来添加灯光。
 尽管这没什么影响，看亮度还得`FULLBRIGHT`，`INTERIOR`只适用于大面积车内光照。
 
 >[!NOTE]
->你可以将一个部件分为多个对象并向其中一些添加`FULLBRIGHT`或`INTERNAL`来使一个部件拥有多种效果
+>你可以将一个部件分为多个对象并向其中一些添加`FULLBRIGHT`或`INTERIOR`来使一个部件拥有多种效果
 > 
 > 比如向一扇车门的内侧部分添加`INTERIOR`而外侧不添加来实现车内照明
 > 
