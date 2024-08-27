@@ -151,7 +151,7 @@ IR通过`assets/immersiverailroading/rolling_stock`中的`stock.json`文件识�
 | independent_brake | boolean |     车辆是否拥有独立制动，对于车厢来讲通常为`true`     |
 |  pressure_brake   | boolean |   车辆是否拥有风压制动器，对于手摇车外的车辆通常为`true`   |
 |  swayMultiplier   | double  | 车辆在`clack=true`的轨道上行驶和通过轨道接缝时的摆动系数 |
-|  tiltMultiplier   | double  |         车辆过弯时的倾斜角度，用于摆式列车          |
+|  tiltMultiplier   | double  |         车辆过弯时的倾斜角度，常用于摆式列车         |
 
 
 ### passenger

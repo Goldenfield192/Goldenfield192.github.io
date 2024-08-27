@@ -37,7 +37,11 @@
 
 只需要把车辆对应连杆部分按以上READOOUT命名即可。
 
-*演示图制作中
+>[!TIP]
+> 这里的side还可以是`INNER_LEFT`、`CENTER`或`INNER_RIGHT`来适应连杆不止两组的机车。
+> IR连杆默认右先行
+
+*演示图WIP
 
 
 ## MALLET_WALSCHAERTS

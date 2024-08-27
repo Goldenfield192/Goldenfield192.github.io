@@ -22,13 +22,8 @@ IR通过识别`TL_[num]_[axis]`来标记移动。对于一个部件，其每个�
 
 这个READOUT用于标记部件在Minecraft的`[axis]`轴上位移了`[num]`米。
 
-`[axis]`为Minecraft轴向下的X、Y或Z。其与blender轴向有如下对应关系：
-
-| Minecraft | blender |
-|:---------:|:-------:|
-|    +X     |   +X    |
-|    +Y     |   +Z    |
-|    +Z     |   -Y    |
+`[axis]`为Minecraft轴向下的X、Y或Z。
+blender坐标系为右手坐标系：拇指为X轴，食指为Y轴，中指为Z轴（中指向上），而Minecraft的右手坐标系为中指水平。两个坐标系的X轴方向一致。
 
 `[num]`表示位移量，正值代表向对应轴正方向移动，负值则相反。
 
@@ -52,22 +47,23 @@ IR会自动根据该部件的朝向计算旋转轴方向，这个轴不一定是
 >[!NOTE]
 >操纵组件时即为改变其动画变量，动画变量再反过来控制组件的渲染。
 
-## 控制车辆
+## 控制车辆，就是可交互控制台
 
-你可以通过一些READOUT来让动画部件控制车辆的变量。
+你可以通过一些READOUT来让动画部件变为控件，进而控制车辆的对应变量。
 
-|            READOUT             |        用途        |
-|:------------------------------:|:----------------:|
-|      `BELL_CONTROL_[num]`      |   为1时触发警铃音效事件    |
-|    `WHISTLE_CONTROL_[num]`     |   为1时触发车哨音效事件    |
-|      `HORN_CONTROL_[num]`      |   为1时触发喇叭音效事件    |
-|        `THROTTLE_[num]`        |   控制车辆节流阀(仅机车)   |
-|        `REVERSER_[num]`        |   控制车辆回转机(仅机车)   |
-|      `TRAIN_BRAKE_[num]`       |   控制车辆刹车(仅机车)    |
-|   `INDEPENDENT_BRAKE_[num]`    | 控制车辆独立制动(如果有的话)  |
-|     `THROTTLE_BRAKE_[num]`     | 控制车辆风压制动器(如果有的话) |
-| `CYLINDER_DRAIN_CONTROL_[num]` |      控制气缸排水      |
-|      `ENGINE_START_[num]`      |      启动内燃机车      |
+|            READOUT             |              用途              |
+|:------------------------------:|:----------------------------:|
+|      `BELL_CONTROL_[num]`      |         为1时触发警铃音效事件          |
+|    `WHISTLE_CONTROL_[num]`     |         为1时触发车哨音效事件          |
+|      `HORN_CONTROL_[num]`      |         为1时触发喇叭音效事件          |
+|        `THROTTLE_[num]`        |         控制车辆节流阀（仅机车）         |
+|        `REVERSER_[num]`        |         控制车辆回转机（仅机车）         |
+|      `TRAIN_BRAKE_[num]`       | 控制~~机车~~全列车刹车（@ZhangSan2333） |
+|   `INDEPENDENT_BRAKE_[num]`    |       控制车辆独立制动（如果有的话）        |
+|     `THROTTLE_BRAKE_[num]`     |       控制车辆风压制动器（如果有的话）       |
+| `CYLINDER_DRAIN_CONTROL_[num]` |             WIP              |
+| `COUPLER_ENGAGED_[pos]_[num]`  |           切换对应车钩模式           |
+|      `ENGINE_START_[num]`      |            启动内燃机车            |
 
 此处`[num]`仅作动画组件的区分之用，即`THROTTLE_1`和`THROTTLE_2`均属于[控制组](Main/Markdowns/Groups)`THROTTLE`。
 
@@ -103,3 +99,8 @@ IR会自动根据该部件的朝向计算旋转轴方向，这个轴不一定是
 要不然IR不读动画的，没有READOUT的部分默认为`SHELL`，`SHELL`没有动画一说。
 
 IR还有`WINDOW_[num]`这个READOUT，不过就和`WIDGET_[num]`一样，只是动画的载体而无实际功能。
+
+>[!TIP]
+> 对于控件、门、窗、[头灯](Lights.md)，你都可以在字符串与数字之间添加`BOGEY_FRONT`或`BOGEY_REAR`来使其跟随前/后转向架运动，如`WIDGET_BOGEY_FRONT_1`会跟随前转向架运动。
+> 若车辆为机车，还可以为`FRONT_LOCOMOTIVE`或`REAR_LOCOMOTIVE`来使其跟随前/后车架运动。
+>   不同部件间共享动画变量方式待测试

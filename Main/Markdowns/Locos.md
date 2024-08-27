@@ -31,19 +31,20 @@
 		"max_speed_kmh": 130,
         "toggle_bell": true,
         "cog": false,
+        "multi_unit_capable":false,
     }
 }
 ```
 
-|         名称          |   类型    |                   	含义                   |
-|:-------------------:|:-------:|:---------------------------------------:|
-|       cab_car       | boolean |    若为`true`，则代表车辆不提供动力，与动力有关的值均强制归零     |
-|     horsepower      |   int   |                机车功率，单位马力                |
-| tractive_effort_lbf |   int   | 机车牵引力，单位为磅</br>*4.44822后用作游戏内显示数值，单位为牛顿 |
-|    max_speed_kmh    | double  |           机车自身能达到的最大时速，单位千米每时           |
-|     toggle_bell     | boolean |       铃声为切换开/关(true)还是长按播放(false)       |
-|         cog         | boolean |    若为`true`，则在`cog=true`的轨道上拥有无限牵引力     |
-
+|         名称          |   类型    |                    	含义                    |
+|:-------------------:|:-------:|:-----------------------------------------:|
+|       cab_car       | boolean |     若为`true`，则代表车辆不提供动力，与动力有关的值均强制归零      |
+|     horsepower      |   int   |                 机车功率，单位马力                 |
+| tractive_effort_lbf |   int   |  机车牵引力，单位为磅</br>*4.44822后用作游戏内显示数值，单位为牛顿  |
+|    max_speed_kmh    | double  |            机车自身能达到的最大时速，单位千米每时            |
+|     toggle_bell     | boolean |        铃声为切换开/关(true)还是长按播放(false)        |
+|         cog         | boolean |     若为`true`，则在`cog=true`的轨道上拥有无限牵引力      |
+| multi_unit_capable  | boolean | 是否允许机车重联运行（在同列车内机车间同步设置节流阀、回转机、风压刹车与独立刹车） |
   * 对于柴油机车，你需要额外添加：
     
       ```json
@@ -53,7 +54,6 @@
               "fuel_capacity_l": 852,
               "horn_sustained": false,
     
-		    "multi_unit_capable":false,
             "throttle_notches": 8,
             "dynamic_traction_control": true
           }
@@ -65,7 +65,6 @@
       |    fuel_efficiency_%     |   int   | 燃料效率，与配置文件中的值乘算（值域[1,99]）  |
       |     fuel_capacity_l      |   int   |       机车的燃料容量，单位升/毫桶       |
       |      horn_sustained      | boolean |  鸣笛时笛声是否循环播放（false则仅播放一次）  |
-    |    multi_unit_capable    | boolean | 是否允许机车重联运行（在相连车厢共享节流阀动画变量） |
     |     throttle_notches     |   int   |     内燃机车挡位数，默认为8（尚不完善）     |
     | dynamic_traction_control | boolean |     车载电脑可否动态调控牵引力以防打滑      |
 
