@@ -77,10 +77,11 @@
 {
   "properties": {
     "valve_gear": {
-      "-1.0": "ResourceLocation",//车辆后退时播放
-      "0.0": "ResourceLocation",//车辆静止时播放
-      "1.0": "ResourceLocation"//车辆前进时播放
-      //你可以添加0.75、0.5、0.25等细分动画让整体动画更流畅。
+      "-1.0": "ResourceLocation",//车辆后退时播放动画的Animatirx文件路径
+      "0.0": "ResourceLocation",//车辆静止时播放动画的Animatirx文件路径
+      "1.0": "ResourceLocation"//车辆前进时播放动画的Animatirx文件路径
+      //此处仅包括全速后退（-1.0）、停止（0.0）与全速前进（1.0）的值。
+      //你也可以添加0.75、0.5、0.25等细分等级动画，让整体动画更流畅。
     }
   }
 }
