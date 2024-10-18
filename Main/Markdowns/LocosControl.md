@@ -65,6 +65,9 @@ IR会自动根据该部件的朝向计算旋转轴方向，这个轴不一定是
 | `COUPLER_ENGAGED_[pos]_[num]`  |           切换对应车钩模式           |
 |      `ENGINE_START_[num]`      |            启动内燃机车            |
 
+>[!TIP]
+> 强烈建议`ENGINE_START_[num]`与`TOGGLE`连用以达到开关效果。
+
 此处`[num]`仅作动画组件的区分之用，即`THROTTLE_1`和`THROTTLE_2`均属于[控制组](Main/Markdowns/Groups)`THROTTLE`。
 
 这些部件的变量值与对应控制部分共享，即操纵`THROTTLE_1`或直接通过键盘控制时，车辆节流阀会改变，`THROTTLE_2`的状态也会一同改变。
