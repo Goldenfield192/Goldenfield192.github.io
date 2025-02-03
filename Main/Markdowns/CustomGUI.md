@@ -164,6 +164,9 @@ element表示的是数组。
 | toggle      | boolean                      | 与Readout的`TOGGLE`相同                                                                                       | 是，默认为false  |
 | clamp       | 枚举值，仅可为`NONE`、`FLOOR`或`CEIL` | 若为`FLOOR`，则仅当动画变量大于0.95时执行为1的动画，否则执行为0的</br>若为`CEIL`，则仅当动画变量小于0.05时执行为0的动画，否则执行为1的<br/>**应用顺序早于`invert`** | 是，默认为`NONE` |
 
+>[!WARNING]
+> 上文的透明度组件包含了一个`translucent = true`。别重复了！
+
 ### 音效
 
 基本定义就是控件音效定义。
@@ -225,7 +228,12 @@ element表示的是数组。
 | y     | int  | 此元素在水平方向的缩放倍数，实际缩放量为此值*动画变量 | 是，默认为0 |
 
 >[!WARNING]
-> 同上，一开始我说了可以`import : "immersiverailroading:gui/default/common/scale.caml"`来设置全局缩放，这个导入内**已经包含了**一个`scale`。别重复了！
+> 上文的全局缩放组件包含了
+> ```caml
+> scale =
+>   x = 4
+>   y = 4
+> ```。别重复了！
 
 ```caml
   element:
