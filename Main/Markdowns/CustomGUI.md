@@ -112,7 +112,7 @@ element表示的是数组。
 > 此处显示的文字可以按下表替换为对应值。仅会对最小单元进行替换，如对于"stat.speed stat.units_speed ppp"，会变成"\[车辆速度\] [当前速度单位] ppp"
 > 如果对应量在车上不存在，则会替换为空字符串（比如非机车的最大速度，不能装液体的车的液体容量，etc.）
 
-|             字段名             |                                                                                     	解释                                                                                      |
+|             字段名             |                                                                                    	会被替换为                                                                                    |
 |:---------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |         state.speed         |                                                                                    车辆当前速度                                                                                    |
 |       state.max_speed       |                                                                                    车辆最大速度                                                                                    |
@@ -124,7 +124,7 @@ element表示的是数组。
 |  state.max_boiler_pressure  |                                                                                   车辆最大锅炉压力                                                                                   |
 | state.units_boiler_pressure | 游戏当前使用的锅炉压力单位（[BAR](https://baike.baidu.com/item/%E5%B7%B4/10756114)或[PSI](https://baike.baidu.com/item/%E7%A3%85%E5%8A%9B%2F%E5%B9%B3%E6%96%B9%E8%8B%B1%E5%AF%B8/65002176)） |
 |      state.temperature      |                                                                                 车辆当前气缸/引擎温度                                                                                  |
-|    state.max_temperature    |                                                                           蒸汽机车是100摄氏度，内燃机车是150摄氏度                                                                            |
+|    state.max_temperature    |                                                                         蒸汽机车是100（摄氏度），内燃机车是150（摄氏度）                                                                          |
 |   state.units_temperature   |                                                                 游戏当前使用的温度单位（C、F或K，但此处开尔文是摄氏度直接加270，而非273.15）                                                                 |
 |    state.brake_pressure     |                                                                   车辆当前刹车（我一直没弄明白brake_pressure什么意思）大小的百分比                                                                    |
 |  state.max_brake_pressure   |                                                                                     100                                                                                      |
