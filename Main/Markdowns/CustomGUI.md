@@ -44,7 +44,7 @@ element表示的是数组。
 >[!TIP]
 > 还记得车内GUI左上角的红色奔驰标吗？点一下就可以进入整体GUI的尺寸（Scale）和透明度（Opacity）设置。
 > 
-> IR内置的GUI全已经实现了这个页面，如果你也需要的话你可以这么做：
+> IR内置的GUI全都实现了这个页面，如果你也需要的话你可以这么做：
 > 
 > 这个配置页可以通过新建根元素并添加`import : "immersiverailroading:gui/default/common/settings.caml"`来实现。不过接下来就不推荐在这个根元素里添加其他代码了，可以再弄一个。
 > 
