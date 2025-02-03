@@ -145,6 +145,9 @@ element表示的是数组。
 | setting         | String | 表示此组件与某个全局变量绑定，全局变量储存在`.minecraft/config/immersiverailroading_graphics.cfg`的`settings`内。 | 是    |
 | texture_variant | String | 作为输入时，如果与车辆当前涂装变体名相等则为1，否则为0；作为输出时，当动画变量为1时切换车辆涂装变体为与自身名称一致的变体。                          | 是    |
 
+>[!WARNING]
+> 上文的透明度组件和全局缩放组件各自包含了一个`setting`。别重复了！
+
 如果用的是`setting`，那么还可以额外在同元素内设置：
 
 | 字段名             | 数据类型  | 解释                            | 可否缺省 |
@@ -153,13 +156,13 @@ element表示的是数组。
 
 然后还有几个修饰符：
 
-| 字段名              | 数据类型                         | 解释                                                                                                        | 可否缺省        |
-|------------------|------------------------------|-----------------------------------------------------------------------------------------------------------|-------------|
-| global           | boolean                      | 与Readout的`GLOBAL`相同                                                                                       | 是，默认为false  |
-| invert           | boolean                      | 与Readout的`INVERT`相同                                                                                       | 是，默认为false  |
-| translucent或hide | boolean                      | 与Readout的`HIDE`相同                                                                                         | 是，默认为false  |
-| toggle           | boolean                      | 与Readout的`TOGGLE`相同                                                                                       | 是，默认为false  |
-| clamp            | 枚举值，仅可为`NONE`、`FLOOR`或`CEIL` | 若为`FLOOR`，则仅当动画变量大于0.95时执行为1的动画，否则执行为0的</br>若为`CEIL`，则仅当动画变量小于0.05时执行为0的动画，否则执行为1的<br/>**应用顺序早于`invert`** | 是，默认为`NONE` |
+| 字段名         | 数据类型                         | 解释                                                                                                        | 可否缺省        |
+|-------------|------------------------------|-----------------------------------------------------------------------------------------------------------|-------------|
+| global      | boolean                      | 与Readout的`GLOBAL`相同                                                                                       | 是，默认为false  |
+| invert      | boolean                      | 与Readout的`INVERT`相同                                                                                       | 是，默认为false  |
+| translucent | boolean                      | 为true时会将透明度设置为与动画变量相同（0完全透明，1完全不透明，中间线性映射）                                                                | 是，默认为false  |
+| toggle      | boolean                      | 与Readout的`TOGGLE`相同                                                                                       | 是，默认为false  |
+| clamp       | 枚举值，仅可为`NONE`、`FLOOR`或`CEIL` | 若为`FLOOR`，则仅当动画变量大于0.95时执行为1的动画，否则执行为0的</br>若为`CEIL`，则仅当动画变量小于0.05时执行为0的动画，否则执行为1的<br/>**应用顺序早于`invert`** | 是，默认为`NONE` |
 
 ### 音效
 
@@ -222,7 +225,7 @@ element表示的是数组。
 | y     | int  | 此元素在水平方向的缩放倍数，实际缩放量为此值*动画变量 | 是，默认为0 |
 
 >[!WARNING]
-> 一开始我说了可以`import : "immersiverailroading:gui/default/common/scale.caml"`来设置全局缩放，这个导入内**已经包含了**一个`scale`。别重复了！
+> 同上，一开始我说了可以`import : "immersiverailroading:gui/default/common/scale.caml"`来设置全局缩放，这个导入内**已经包含了**一个`scale`。别重复了！
 
 ```caml
   element:
