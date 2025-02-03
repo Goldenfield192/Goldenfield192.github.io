@@ -221,7 +221,7 @@ element表示的是数组。
 | x     | int  | 此元素在水平方向的缩放倍数，实际缩放量为此值*动画变量 | 是，默认为0 |
 | y     | int  | 此元素在水平方向的缩放倍数，实际缩放量为此值*动画变量 | 是，默认为0 |
 
->[WARNING]
+>[!WARNING]
 > 一开始我说了可以`import : "immersiverailroading:gui/default/common/scale.caml"`来设置全局缩放，这个导入内**已经包含了**一个`scale`。别重复了！
 
 ```caml
