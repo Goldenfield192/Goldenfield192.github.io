@@ -49,6 +49,7 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 
 >[!TIP]
 > 下文的“是否”控制的变量都是是为1否为0（类似C中布尔值表示方式）
+> 如果你是从其他地方过来的，那么带*的Readout表示它是可写的，否则为只读。
 
 |          字段名           |                              	解释                               |
 |:----------------------:|:--------------------------------------------------------------:|
@@ -56,26 +57,26 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 |         SPEED          | 车辆当前速度与按轨距缩放的最大速度的比值（最大速度为机车时是json内数值/3.6，车辆为车厢时恒为200）（单位是m/s） |
 |      TEMPERATURE       |              对于蒸汽机车返回当前温度/100，内燃机车为当前温度/150，否则为0               |
 |    BOILER_PRESSURE     |            对于蒸汽机车为当前气缸压与按轨距缩放的json内`maxPSI`的比值，否则为0            |
-|        THROTTLE        |                        对于机车为节流阀大小，否则为0                         |
-|        REVERSER        |                对于机车为回转机状态（0倒车档，0.5默认，1前进档），否则为0                |
-|      TRAIN_BRAKE       |                         对于机车为制动大小，否则为0                         |
-|   TRAIN_BRAKE_LEVER    |                             列车制动大小                             |
-|   INDEPENDENT_BRAKE    |                            车辆独立制动大小                            |
+|      THROTTLE(*)       |                        对于机车为节流阀大小，否则为0                         |
+|      REVERSER(*)       |                对于机车为回转机状态（0倒车档，0.5默认，1前进档），否则为0                |
+|     TRAIN_BRAKE(*)     |                         对于机车为制动大小，否则为0                         |
+|  TRAIN_BRAKE_LEVER(*)  |                             列车制动大小                             |
+|  INDEPENDENT_BRAKE(*)  |                            车辆独立制动大小                            |
 |     BRAKE_PRESSURE     |                              WIP                               |
-|     COUPLER_FRONT      |                            前车钩是否打开                             |
-|      COUPLER_REAR      |                            后车钩是否打开                             |
+|    COUPLER_FRONT(*)    |                            前车钩是否打开                             |
+|    COUPLER_REAR(*)     |                            后车钩是否打开                             |
 |     COUPLED_FRONT      |                         前车钩是否已连接到其他车辆                          |
 |      COUPLED_REAR      |                         后车钩是否已连接到其他车辆                          |
 |  COUPLER_SLACK_FRONT   |                        前车钩滑动量与最大滑动量的比值                         |
 |   COUPLER_SLACK_REAR   |                        后车钩滑动量与最大滑动量的比值                         |
-|          BELL          |                            是否正在播放铃声                            |
-|      HORN或WHISTLE      |                            是否正在播放笛声                            |
-|         ENGINE         |                       对于内燃机车为是否已启动，否则为0                        |
+|        BELL(*)         |                            是否正在播放铃声                            |
+|    HORN或WHISTLE(*)     |                            是否正在播放笛声                            |
+|       ENGINE(*)        |                       对于内燃机车为是否已启动，否则为0                        |
 |   FRONT_BOGEY_ANGLE    |         前转向架偏转角度，将-90°到+90°（从上向下看逆时针为正，初始位置为0）线性映射到0到1         |
 |    REAR_BOGEY_ANGLE    |                         后转向架偏转角度，定义同上                          |
 | FRONT_LOCOMOTIVE_ANGLE |                          前车架偏转角度，定义同上                          |
 | REAR_LOCOMOTIVE_ANGLE  |                          后车架偏转角度，定义同上                          |
-|     CYLINDER_DRAIN     |                              WIP                               |
+|   CYLINDER_DRAIN(*)    |                              WIP                               |
 |       CARGO_FILL       |                     若车辆可装载货物则为装载量百分比，否则为0                      |
 |       ENGINE_RPM       |             对于内燃机车则是车辆实际节流阀大小（GUI红线，与设置值有滞后性），否则为0             |
 

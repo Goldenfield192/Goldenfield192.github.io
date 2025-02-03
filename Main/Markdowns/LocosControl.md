@@ -20,7 +20,7 @@ IR通过识别以下READOUT来加载动画：
 
 IR通过识别`TL_[num]_[axis]`来标记移动。对于一个部件，其每个轴向上都允许有一个或零个`TL`。
 
-这个READOUT用于标记部件在Minecraft的`[axis]`轴上位移了`[num]`米。
+这个READOUT用于标记部件动画变量为1时，其在Minecraft的`[axis]`轴上位移了`[num]`米，部件动画变量为0时表示其在原位置，中间值线性映射到各个位置。
 
 `[axis]`为Minecraft轴向下的X、Y或Z。
 blender坐标系为右手坐标系：拇指为X轴，食指为Y轴，中指为Z轴（中指向上），而Minecraft的右手坐标系为中指水平。两个坐标系的X轴方向一致。
@@ -29,11 +29,11 @@ blender坐标系为右手坐标系：拇指为X轴，食指为Y轴，中指为Z�
 
 ### 缩放
 
-IR通过识别`SCALE_[num]_[axis]`来标记移动。对于一个部件，其每个轴向上都允许有一个或零个`SCALE`。
+IR通过识别`SCALE_[num]_[axis]`来标记缩放。对于一个部件，其每个轴向上都允许有一个或零个`SCALE`。
 
-这个READOUT用于标记部件默认状态下在Minecraft的`[axis]`轴上被缩放到`1-[num]`倍，对应轴向缩放中心点为标记对应READOUT的物体的中心。
+这个READOUT用于标记部件默认状态下在Minecraft的`[axis]`轴上被缩放到`1-[num]+[num]*[动画变量]`倍，对应轴向缩放中心点为标记对应READOUT的物体的中心。
 
-举个例子，若一个部件拥有`SCALE_1_X`，则代表这个部件在动画变量为0时在X轴上缩放为0，在动画变量为1时复原(缩放到1)。
+举个例子，若一个部件拥有`SCALE_1_X`，则代表这个部件在动画变量为0时在X轴上缩放为0，在动画变量为1时缩放到原状。
 
 ### 旋转
 
@@ -76,7 +76,7 @@ IR会自动根据该部件的长边指向计算旋转轴方向，这个轴不一
 >[!TIP]
 > 强烈建议`ENGINE_START_[num]`与`TOGGLE`连用以达到开关效果。
 
-此处`[num]`仅作动画组件的区分之用，即`THROTTLE_1`和`THROTTLE_2`均属于[控制组](Main/Markdowns/Groups)`THROTTLE`。
+此处`[num]`仅作动画组件的区分之用，即`THROTTLE_1`和`THROTTLE_2`均属于[控制组](Main/Markdowns/Groups.md)`THROTTLE`。
 
 这些部件的变量值与对应控制部分共享，即操纵`THROTTLE_1`或直接通过键盘控制时，车辆节流阀会改变，`THROTTLE_2`的状态也会一同改变。
 

@@ -83,12 +83,12 @@
 }
 ```
 
-|      关键字      |        类型        |                 含义                 |
-|:-------------:|:----------------:|:----------------------------------:|
-|   `engage`    | ResourceLocation |             玩家按下控件时播放              |
-|    `move`     | ResourceLocation |             玩家操控控件途中播放             |
+|      关键字      |        类型        |            含义             |
+|:-------------:|:----------------:|:-------------------------:|
+|   `engage`    | ResourceLocation |         玩家按下控件时播放         |
+|    `move`     | ResourceLocation |        玩家操控控件途中播放         |
 | `movePercent` |      float       | 在播放move前，控件的动画变量需要至少改变多少？ |
-|  `disengage`  | ResourceLocation |             玩家松开控件时播放              |
+|  `disengage`  | ResourceLocation |         玩家松开控件时播放         |
 
 你可以在`controls`里添加你想加音效的部件，填入它们的**原始**READOUT即可。Cam的例子是对于`k4_REVERSER_1_Cube`，填`REVERSER_1`。
 
