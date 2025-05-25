@@ -49,7 +49,7 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 
 >[!TIP]
 > 下文的“是否”控制的变量都是是为1否为0（类似C中布尔值表示方式）
-> 如果你是从其他地方过来的，那么带*的Readout表示它是可写的，否则为只读。
+> 如果你是从GUI部分/其他地方跳转过来的，那么带*的Readout表示它是可写的，否则为只读。
 
 |          字段名           |                              	解释                               |
 |:----------------------:|:--------------------------------------------------------------:|
@@ -62,7 +62,7 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 |     TRAIN_BRAKE(*)     |                         对于机车为制动大小，否则为0                         |
 |  TRAIN_BRAKE_LEVER(*)  |                             列车制动大小                             |
 |  INDEPENDENT_BRAKE(*)  |                            车辆独立制动大小                            |
-|     BRAKE_PRESSURE     |                              WIP                               |
+|     BRAKE_PRESSURE     |                             全列制动大小                             |
 |    COUPLER_FRONT(*)    |                            前车钩是否打开                             |
 |    COUPLER_REAR(*)     |                            后车钩是否打开                             |
 |     COUPLED_FRONT      |                         前车钩是否已连接到其他车辆                          |
