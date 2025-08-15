@@ -1,5 +1,3 @@
-> Want English version? Check out [Here](https://goldenfield192.github.io/en/#)
-
 你好，这是一部IR资源包制作百科。
 
 如果你想跟着它学习，请先确定：
