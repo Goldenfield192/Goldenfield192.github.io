@@ -1,4 +1,4 @@
-> Want English version? Check out [Here](goldenfield192.github.io/en/#)
+> Want English version? Check out [Here]()
 
 你好，这是一部IR资源包制作百科。
 
