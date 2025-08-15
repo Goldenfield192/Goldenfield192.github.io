@@ -5,12 +5,8 @@
 * json是不是有语法错误？
 * 通过资源包页添加资源包后需重启游戏，或者你也可以放在`.minecraft/config/immersiverailroading`下。
 
->2.IR支持PBR吗
+>2.我的游戏崩溃了怎么办？
 
-* 对于IR1.10/UMC1.2.1，不，加了光影也不行。
-
->3.游戏崩溃？
-
-* 我知道在与OptiFine共存时，切换光影大概率会导致游戏崩溃，有时NotEnoughCrashes也无法阻止。并且崩溃时游戏会自动卸载所有资源包。
+* 我知道在1.16.5，与OptiFine共存时，切换光影包大概率会导致游戏崩溃，有时NotEnoughCrashes也无法阻止。并且崩溃时游戏会自动卸载所有资源包。
 >所以你应该装在`.minecraft/config/immersiverailroading`下。
-* 其他的大抵可以给Cam[提issue](https://github.com/TeamOpenIndustry/ImmersiveRailroading/issues)了。
+* 其他的大抵可以给IR[提issue](https://github.com/TeamOpenIndustry/ImmersiveRailroading/issues)了。

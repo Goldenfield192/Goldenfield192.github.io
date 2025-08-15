@@ -83,7 +83,7 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 
 |      |     item     |    cost     |
 |:----:|:------------:|:-----------:|
-|  类型  |  Fuzzy，WIP   |     int     |
+|  类型  |  对应物品的矿物词典名  |     int     |
 | TIE  | 放置轨道时消耗的路基种类 | 放置每米轨道消耗的数量 |
 | BED  | 放置轨道时消耗的道砟种类 | 放置每米轨道消耗的数量 |
 | RAIL | 放置轨道时消耗的铁轨种类 | 放置每米轨道消耗的数量 |
@@ -107,6 +107,6 @@ IR而后会在`assets/immersiverailroading/track`中寻找对应名称的JSON，
 >[!NOTE]
 >一段轨道至少应该拥有`RAIL_BASE`、`RAIL_LEFT`和`RAIL_RIGHT`三种READOUT。
 > 
-> 如若对象不包含有效READOUT，则在某些情况下不会被渲染从而影响观感，而非像车辆般默认为`SHELL`。（@saltyfish）
+> 如若轨道模型里的物体不包含有效READOUT，则在某些情况下不会被渲染从而影响观感，而非像车辆般默认为`SHELL`。（@saltyfish）
 > 
 > 如果轨道没有`RAIL_LEFT`和`RAIL_RIGHT`则会报NullPointerException。

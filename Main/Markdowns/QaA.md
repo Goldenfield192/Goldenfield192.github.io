@@ -1,5 +1,5 @@
 >1.什么是READOUT？
-   * IR使用对象名来区分组件并控制动画，这些对象名中可被识别的语素即为READOUT。
+   * IR使用对象名来区分组件并控制动画，这些对象名中可被识别的语素即为READOUT。通常情况下不同的READOUT在游戏内会成为不同的零件。
     
         > [!WARNING]
         > 每个READOUT间应使用下划线分割，否则会导致识别出错。
@@ -11,7 +11,8 @@
        * 名称为`BOGEY_FRONT_WHEEL_1`和`BOGEY_FRONT_WHEEL_2`的两个对象会被认为是两个组件；
        * 但名称为`BOGEY_FRONT_WHEEL_1_1`和`BOGEY_FRONT_WHEEL_1_2`的两个对象会被认为是同一组件，这经常导向轮子旋转动画不对的结果；
        * 而`BOGEY_FRONT_WHEEL1`和`BOGEY_FRONT_WHEEL2`不会被加载（不存在对应的READOUT，会被加载为没有动画的`SHELL`）。
-         !>无论如何你的车模至少应该有一个`FRAME`。
+       
+         >[!NOTE]为了让它在生存模式可被制造，你的火车模型至少应该有一个`FRAME`。
    * READOUT是无序的。
    * 除READOUT外的字符均可自定义。
    * 下文约定：

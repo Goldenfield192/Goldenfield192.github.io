@@ -1,6 +1,7 @@
 - 序章
   - [Q&A](Main/Markdowns/QaA.md)
   - [CAML](Main/Markdowns/caml.md)
+  - [PBR贴图](Main/Markdowns/pbr.md)
   - [常见问题](Main/Markdowns/Problems.md)
 
 - 轨道

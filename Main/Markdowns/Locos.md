@@ -45,7 +45,7 @@
 |     toggle_bell     | boolean |        铃声为切换开/关(true)还是长按播放(false)        |
 |         cog         | boolean |     若为`true`，则在`cog=true`的轨道上拥有无限牵引力      |
 | multi_unit_capable  | boolean | 是否允许机车重联运行（在同列车内机车间同步设置节流阀、回转机、风压刹车与独立刹车） |
-  * 对于柴油机车，你需要额外添加：
+  * 对于柴油机车，你需要额外在对应块内添加：
     
       ```json
       {
@@ -68,15 +68,14 @@
     |     throttle_notches     |   int   |     内燃机车挡位数，默认为8（尚不完善）     |
     | dynamic_traction_control | boolean |     车载电脑可否动态调控牵引力以防打滑      |
 
-* 对于蒸汽机车，你需要额外添加：
+* 对于蒸汽机车，你需要额外在对应块内添加：
 
     ```json
     {
         "properties": {
 	    	"max_psi": 300,
 	    	"water_capacity_l": 95000, 
-            "tender_auto_feed": true,
-            ...
+            "tender_auto_feed": true
         },
         "firebox": {
 		    "slots": 30,
@@ -95,7 +94,7 @@
 * 对于手摇车，没有需额外添加的json，**但是你需要删去`era`语句。** 
 
 >[!TIP]
-> 如果进入对话框等鼠标可自由移动的情景，IR的控制台可以用鼠标交互！
+> 如果进入对话框等鼠标可自由移动的情景，IR的控制台可以用鼠标交互！参见[自定义GUI](Main/Markdowns/CustomGUI.md)
 
 # 模型
 

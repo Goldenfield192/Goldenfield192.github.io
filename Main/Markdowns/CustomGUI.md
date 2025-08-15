@@ -119,7 +119,7 @@ element表示的是数组。
 |      state.units_speed      |                                                                          游戏当前使用的速度单位（km/h、mph或m/s）                                                                           |
 |        state.liquid         |                                                                                   车辆当前液体容量                                                                                   |
 |      state.max_liquid       |                                                                                   车辆最大液体容量                                                                                   |
-|     state.units_liquid      |                                                                           游戏当前使用的速度单位（B，桶，或者说一立方米）                                                                           |
+|     state.units_liquid      |                                                                         游戏当前使用的流体容量单位（B，即桶，或者说一立方米）                                                                          |
 |    state.boiler_pressure    |                                                                                   车辆当前锅炉压力                                                                                   |
 |  state.max_boiler_pressure  |                                                                                   车辆最大锅炉压力                                                                                   |
 | state.units_boiler_pressure | 游戏当前使用的锅炉压力单位（[BAR](https://baike.baidu.com/item/%E5%B7%B4/10756114)或[PSI](https://baike.baidu.com/item/%E7%A3%85%E5%8A%9B%2F%E5%B9%B3%E6%96%B9%E8%8B%B1%E5%AF%B8/65002176)） |
@@ -140,7 +140,7 @@ element表示的是数组。
 
 | 字段名             | 数据类型   | 解释                                                                                       | 可否缺省 |
 |-----------------|--------|------------------------------------------------------------------------------------------|------|
-| readout         | String | 表示此组件与内置Readout绑定（参见[Animatrix一节](Animatrix.md)）。                                        | 是    |
+| readout         | String | 表示此组件与内置Readout绑定（参见[Animatrix一节](Main/Markdowns/Animatrix.md)）。                         | 是    |
 | control         | String | 表示此组件与某个控制组绑定。                                                                           | 是    |
 | setting         | String | 表示此组件与某个全局变量绑定，全局变量储存在`.minecraft/config/immersiverailroading_graphics.cfg`的`settings`内。 | 是    |
 | texture_variant | String | 作为输入时，如果与车辆当前涂装变体名相等则为1，否则为0；作为输出时，当动画变量为1时切换车辆涂装变体为与自身名称一致的变体。                          | 是    |
