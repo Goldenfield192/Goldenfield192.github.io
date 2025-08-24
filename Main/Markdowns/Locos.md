@@ -31,7 +31,7 @@
 		"max_speed_kmh": 130,
         "toggle_bell": true,
         "cog": false,
-        "multi_unit_capable":false,
+        "multi_unit_capable":false
     }
 }
 ```
