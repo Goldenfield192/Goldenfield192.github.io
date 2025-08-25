@@ -77,11 +77,12 @@ IR会自动根据该部件的长边指向计算旋转轴方向，这个轴不一
 |   `INDEPENDENT_BRAKE_[num]`    |       控制车辆独立制动（如果有的话）        |
 |     `THROTTLE_BRAKE_[num]`     |       控制车辆风压制动器（如果有的话）       |
 | `CYLINDER_DRAIN_CONTROL_[num]` |             WIP              |
-| `COUPLER_ENGAGED_[pos]_[num]`  |           切换对应车钩模式           |
+| `COUPLER_ENGAGED_[pos]_[num]`  |    切换对应车钩模式，0为正常模式，1为调车模式    |
 |      `ENGINE_START_[num]`      |            启动内燃机车            |
 
 >[!TIP]
-> 强烈建议`ENGINE_START_[num]`与`TOGGLE`连用以达到开关效果。
+> 1.“正常模式”即车钩可以正常连挂的模式，“调车模式”的车钩不会与其他车钩连挂并且会自动解开已连挂的车钩。IR车钩连挂不需要车钩打开。
+> 2.强烈建议`ENGINE_START_[num]`与`TOGGLE`连用以达到开关效果。
 
 此处`[num]`仅作动画组件的区分之用，即`THROTTLE_1`和`THROTTLE_2`均属于[控制组](Main/Markdowns/Groups.md)`THROTTLE`。
 
