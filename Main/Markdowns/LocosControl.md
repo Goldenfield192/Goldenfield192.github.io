@@ -77,7 +77,7 @@ IR会自动根据该部件的长边指向计算旋转轴方向，这个轴不一
 |   `INDEPENDENT_BRAKE_[num]`    |       控制车辆独立制动（如果有的话）        |
 |     `THROTTLE_BRAKE_[num]`     |       控制车辆风压制动器（如果有的话）       |
 | `CYLINDER_DRAIN_CONTROL_[num]` |             WIP              |
-| `COUPLER_ENGAGED_[pos]_[num]`  |           切换对应车钩模式           |
+| `COUPLER_ENGAGED_[num]_[pos]`  |           切换对应车钩模式           |
 |      `ENGINE_START_[num]`      |            启动内燃机车            |
 
 >[!TIP]
