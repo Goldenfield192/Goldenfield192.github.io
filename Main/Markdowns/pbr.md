@@ -30,7 +30,13 @@ map_Ns mat1_base_s.png
 >[!TIP]当然你也可以在游戏内配置页面的`ConfigGraphic`里修改。
 
 附录 经过我个人测试的光影包：
+
 SEUS v10.1
+
 SEUS Renewed v1.0.1
+
 SEUS PTGI HRR v2.1
+
 Kappa shader
+
+IterationT 3.2
