@@ -26,7 +26,7 @@ map_Ns mat1_base_s.png
 > 
 > 高光贴图同理。
 
-为了让光影包正确渲染他们，你可能还需要在配置文件`immersiverailroading_graphics.cfg`中修改`immersiverailroading_graphics.cfg`为`Terrain`。
+为了让光影包正确渲染他们，你可能还需要在配置文件`immersiverailroading_graphics.cfg`中修改`OpenFineEntityShader`为`Terrain`。
 >[!TIP]当然你也可以在游戏内配置页面的`ConfigGraphic`里修改。
 
 附录 经过我个人测试的光影包：
