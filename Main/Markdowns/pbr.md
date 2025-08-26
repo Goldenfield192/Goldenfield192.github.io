@@ -22,9 +22,9 @@ map_Bump mat1_base_n.png
 map_Ns mat1_base_s.png
 ```
 然后就能加载了。
->[!WARNING]由于IR的法线贴图加载没有占位符机制，所以对于一个指定了法线贴图的材质，对应mtl内所有材质必须全部指定法线贴图，否则一张也不会加载！
-> 
-> 高光贴图同理。
+>[!WARNING]
+> 1.由于IR的法线贴图加载没有占位符机制，所以对于一个指定了法线贴图的材质，对应mtl内所有材质必须全部指定法线贴图，否则一张也不会加载！ 高光贴图同理。
+> 2.你可能需要在UMC的配置文件下修改`MaxTextureSize`至一个比较小的值，否则高光/法线贴图可能不会工作。
 
 为了让光影包正确渲染他们，你可能还需要在配置文件`immersiverailroading_graphics.cfg`中修改`OpenFineEntityShader`为`Terrain`。
 >[!TIP]当然你也可以在游戏内配置页面的`ConfigGraphic`里修改。
