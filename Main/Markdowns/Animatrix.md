@@ -89,7 +89,7 @@ Cam在GitHub上发了个blender脚本，可以当插件装：[animatrix.py](http
 |:------------:|:---------------------------------:|
 |    VALUE     |     直接由动画变量控制动画状态，动画变量即为动画百分比     |
 | PLAY_FORWARD |        当且仅当动画变量大于等于0.95时正放        |
-| PLAY_REVERSE |         当且仅当动画变量小于0.95时倒放         |
+| PLAY_REVERSE |         当且仅当动画变量小于0.95时正放         |
 |  PLAY_BOTH   | `PLAY_FORWARD`加上`PLAY_REVERSE`的效果 |
 |     LOOP     |          动画变量大于0.95时循环播放          |
 |  LOOP_SPEED  |          循环播放，但速度随动画变量变化          |
