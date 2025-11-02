@@ -72,6 +72,9 @@
 
 ## Animatrix
 
+>[!TIP]
+> @wululapuda: 所有动画都是以前进方向运动为基准，倒车时指定的倒车动画会从后往前播。
+
 你可以使用[Animatrix](Animatrix.md)功能自定义连杆动画：
 ```json
 {
