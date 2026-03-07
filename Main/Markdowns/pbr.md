@@ -6,7 +6,7 @@ IR支持指定PBR贴图但是方法有点不寻常...没关系，这就是这样
 和漫反射贴图一样，IR的法线（Normal）和高光（Specular）贴图也需要在mtl文件内指定，而不是类似其他资源包的_n/_s。
 > 关于他们的格式，[Iris](https://shaders.properties/current/how-to/pbr_standards/#formats)有详细讲解。
 > 
-> 这两种格式均可使用，但是要注意挑选支持对应格式的光影包。
+> 这两种格式均可使用，但是要注意挑选支持对应格式的光影包（Shader pack）。
 
 为了添加他们，你需要在mtl文件的对应材质内将法线贴图指定到`map_Bump`，将高光贴图指定到`map_Ns`，就像这样：
 ```mtl
