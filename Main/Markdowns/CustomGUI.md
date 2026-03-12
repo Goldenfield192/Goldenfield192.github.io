@@ -108,30 +108,30 @@ element表示的是数组。
 
 如果应用了透明度组件，则透明度<0.1时文字就不会渲染，反之则会渲染为完全不透明状态。
 
->[!TIP]
-> 此处显示的文字可以按下表替换为对应值。仅会对最小单元进行替换，如对于"stat.speed stat.units_speed ppp"，会变成"\[车辆速度\] [当前速度单位] ppp"
-> 如果对应量在车上不存在，则会替换为空字符串（比如非机车的最大速度，不能装液体的车的液体容量，etc.）
+> 1. 此处显示的文字可以按下表替换为对应值。仅会对最小单元进行替换，如对于"stat.speed stat.units_speed ppp"，会变成"\[车辆速度\] [当前速度单位] ppp"
+>    如果对应量在车上不存在，则会替换为空字符串（比如非机车的最大速度，不能装液体的车的液体容量，etc.）
+> 2. 你可以在标识符后面加上`.n`来使其显示n位小数（默认情况下除流体、压强、温度相关显示1位外，其余只显示整数部分）。其中1\<=n<=5 
 
-|             字段名             |                                                                                    	会被替换为                                                                                    |
-|:---------------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|         state.speed         |                                                                                    车辆当前速度                                                                                    |
-|       state.max_speed       |                                                                                    车辆最大速度                                                                                    |
-|      state.units_speed      |                                                                          游戏当前使用的速度单位（km/h、mph或m/s）                                                                           |
-|        state.liquid         |                                                                                   车辆当前液体容量                                                                                   |
-|      state.max_liquid       |                                                                                   车辆最大液体容量                                                                                   |
-|     state.units_liquid      |                                                                         游戏当前使用的流体容量单位（B，即桶，或者说一立方米）                                                                          |
-|    state.boiler_pressure    |                                                                                   车辆当前锅炉压力                                                                                   |
-|  state.max_boiler_pressure  |                                                                                   车辆最大锅炉压力                                                                                   |
-| state.units_boiler_pressure | 游戏当前使用的锅炉压力单位（[BAR](https://baike.baidu.com/item/%E5%B7%B4/10756114)或[PSI](https://baike.baidu.com/item/%E7%A3%85%E5%8A%9B%2F%E5%B9%B3%E6%96%B9%E8%8B%B1%E5%AF%B8/65002176)） |
-|      state.temperature      |                                                                                 车辆当前气缸/引擎温度                                                                                  |
-|    state.max_temperature    |                                                                         蒸汽机车是100（摄氏度），内燃机车是150（摄氏度）                                                                          |
-|   state.units_temperature   |                                                                 游戏当前使用的温度单位（C、F或K，但此处开尔文是摄氏度直接加270，而非273.15）                                                                 |
-|    state.brake_pressure     |                                                                                  全列制动大小的百分比                                                                                  |
-|  state.max_brake_pressure   |                                                                                     100                                                                                      |
-| state.units_brake_pressure  |                                                                                      %                                                                                       |
-|      state.cargo_fill       |                                                                                 车辆当前物品容量百分比                                                                                  |
-|    state.max_cargo_fill     |                                                                                     100                                                                                      |
-|   state.units_cargo_fill    |                                                                                      %                                                                                       |
+|             字段名             |                                                                                        	会被替换为                                                                                        |
+|:---------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|         state.speed         |                                                                                        车辆当前速度                                                                                        |
+|       state.max_speed       |                                                                                        车辆最大速度                                                                                        |
+|      state.units_speed      |                                                                              游戏当前使用的速度单位（km/h、mph或m/s）                                                                               |
+|        state.liquid         |                                                                                       车辆当前液体容量                                                                                       |
+|      state.max_liquid       |                                                                                       车辆最大液体容量                                                                                       |
+|     state.units_liquid      |                                                                             游戏当前使用的流体容量单位（B，即桶，或者说一立方米）                                                                              |
+|    state.boiler_pressure    |                                                                                       车辆当前锅炉压力                                                                                       |
+|  state.max_boiler_pressure  |                                                                                       车辆最大锅炉压力                                                                                       |
+| state.units_boiler_pressure | 游戏当前使用的锅炉压强单位（[BAR](https://baike.baidu.com/item/%E5%B7%B4/10756114)，[PSI](https://baike.baidu.com/item/%E7%A3%85%E5%8A%9B%2F%E5%B9%B3%E6%96%B9%E8%8B%B1%E5%AF%B8/65002176)或kPa（千帕）） |
+|      state.temperature      |                                                                                     车辆当前气缸/引擎温度                                                                                      |
+|    state.max_temperature    |                                                                             蒸汽机车是100（摄氏度），内燃机车是150（摄氏度）                                                                              |
+|   state.units_temperature   |                                                                                  游戏当前使用的温度单位（C、F或K）                                                                                  |
+|    state.brake_pressure     |                                                                                      全列制动大小的百分比                                                                                      |
+|  state.max_brake_pressure   |                                                                                         100                                                                                          |
+| state.units_brake_pressure  |                                                                                          %                                                                                           |
+|      state.cargo_fill       |                                                                                     车辆当前物品容量百分比                                                                                      |
+|    state.max_cargo_fill     |                                                                                         100                                                                                          |
+|   state.units_cargo_fill    |                                                                                          %                                                                                           |
 
 ## 动画相关
 
